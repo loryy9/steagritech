@@ -443,9 +443,9 @@ body::before {
 }
 
 @media only screen and (max-width: 768px) {
-    html{
+    /*html{
         background-color: #245254;    
-    }
+    }*/
     body {
         overflow-x: hidden;
     }
