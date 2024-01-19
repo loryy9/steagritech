@@ -601,7 +601,6 @@ body::before {
         margin-left: 0;
         width: 280px;
         margin-top: 0;
-        height: fit-content;
         margin-bottom: 0;
         filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.5));
     }
