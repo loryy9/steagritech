@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital@0;1&display=swap');
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Figtree', sans-serif;
+    position: relative;
+    background: url('sources/wallpaper-tot.png') center/cover no-repeat fixed; /* Sfondo fisso */
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+}
+
+
+
+.logo img {
+    height: 100px;
+    padding-left: 100px;
+    padding-top: 35px;
+}
+
+.nav-links {
+    display: flex;
+    margin-right: 50px;
+    padding-top: 35px;
+}
+
+.nav-links a {
+    color: #d9d9d9 ;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 23px;
+    transition: transform 0.5s;
+}
+
+.nav-links a:hover {
+    transform: translateY(-5px);
+    color: black;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto; /* Altezza automatica per adattarsi al contenuto */
+}
+
+.card {
+    width: 70%;
+    min-height: 70vh; /* Altezza minima per ogni carta */
+    background-color: rgba(255,255,255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    opacity: 1;
+    color: #d9d9d9;
+    transition: transform 0.8s, opacity 0.8s;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    justify-content: center;
+}
+.left {
+    transform: translateX(-100%); /* Fuori a sinistra */
+
+}
+
+.right {
+    transform: translateX(100%); /* Fuori a destra */
+
+}
+
+.sezione-sinistra{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    padding: 20px;
+}
+
+.sezione-sinistra h1{
+    font-size: 40px;
+}
+
+.sezione-sinistra p{
+    font-size: 25px;
+    margin: 10px;
+}
+
+.sezione-destra{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.sezione-destra p{
+    font-size: 25px;
+    margin: 10px;
+    line-height: 30px;
+}
+
+.card.in-view {
+    transform: translateX(0);
+}
+
+.sezione-destra .start{
+    width: 300px;
+}
+
+.sezione-sinistra .book{
+    width: 300px;
+}
+
+.sezione-sinistra .social-life{
+    width: 300px;
+}
+.sezione-destra .follow{
+    width: 300px;
+}
+
+.footer {
+    background-color: #2c2c2c;
+    color: #ffffff;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    font-size: 20px;
+}
+
+.footer-column {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .social-icons img {
+    width: 25px;
+    margin: 0 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 10%;
+    }
+    .nav-links {
+        display: flex;
+        margin-right: 0;
+        padding: 0;
+        padding-top: 50px;
+    }
+    .nav-links a {
+        color: #8EBCB1;
+        text-decoration: none;
+        float: right;
+        right: 0;
+        font-weight: bold;
+        font-size: 15px;
+        transition: transform 0.5s;
+        /* Aggiunta della transizione per la trasformazione */
+    }
+    .logo img {
+        height: 50px;
+        padding-left: 5px;
+        padding-top: 50px;
+        margin-right: 15px;
+    }
+
+    .card-container{
+        margin-top:  90px; ;
+    }
+    .card .sezione-destra img,
+    .card .sezione-sinistra img {
+        display: none;
+    }
+
+    /* Imposta il layout delle carte in modo che il contenuto sia visualizzato come una singola colonna */
+    .card {
+        width: 70%; /* Ad esempio, puoi regolare la larghezza come preferisci */
+        min-height: auto; /* Rimuovi l'altezza minima per adattarsi al contenuto */
+        padding: 0px; /* Aggiungi padding per separare il contenuto dal bordo della carta */
+        box-sizing: border-box; /* Assicurati che il padding non aumenti le dimensioni della carta */
+        display: flex; /* Utilizza un layout flex per allineare il contenuto come una singola colonna */
+        flex-direction: column; /* Imposta il layout come colonna */
+        align-items: center; /* Allinea il contenuto al centro se necessario */
+    }
+    .sezione-sinistra h1,
+    .sezione-sinistra p,
+    .sezione-destra p {
+        font-size: 18px; /* Riduci il font-size */
+        text-align: center; /* Centra il testo */
+    }
+
+
+
+    .sezione-destra{
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+    
+    .sezione-destra p{
+        line-height: 20px;
+    }
+
+    .footer{
+        flex-direction: column;
+        font-size: 15px;
+    }
+
+    .footer-column {
+        flex-basis: 100%;  /* Questo fa in modo che ogni colonna del footer occupi l'intera larghezza */
+        margin-bottom: 20px; /* Aggiungi uno spazio tra le colonne del footer in modalità mobile */
+    }
+
+}

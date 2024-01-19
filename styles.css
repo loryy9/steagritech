@@ -1,0 +1,731 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital@0;1&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Figtree', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('sources/pannocchie.jpg') center/cover no-repeat fixed;
+    z-index: -1;
+}
+
+.main-container {
+    background: url('sources/wallpaper5.png') center/cover no-repeat;
+    color: #ffffff;
+    height: 110vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+}
+
+.logo img {
+    height: 100px;
+    padding-left: 100px;
+    padding-top: 90px;
+}
+
+.nav-links {
+    display: flex;
+    margin-right: 50px;
+    padding-top: 90px;
+}
+
+.nav-links a {
+    color: #245254;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 23px;
+    transition: transform 0.5s;
+}
+
+.nav-links a:hover {
+    transform: translateY(-5px);
+    color: black;
+}
+
+.main-page {
+    display: flex;
+    margin-top: 20px;
+    height: 80%;
+}
+
+.right-column {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.right-column img {
+    margin-left: 27%;
+    height: 100%;
+    margin-top: 14%;
+}
+
+.left-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.about-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.about-item img {
+    width: 50px;
+    margin-right: 20px;
+    margin-left: 15%;
+    margin-bottom: 5%;
+}
+
+.laurea {
+    font-size: 25px;
+    margin-right: 1%;
+    margin-bottom: 5%;
+    color: #8EBCB1;
+    max-width: 400px;
+}
+
+.titolo-piccolo {
+    font-size: 25px;
+    margin-left: 15%;
+    color: #8EBCB1;
+    font-style: italic;
+    text-align: left;
+}
+
+.titolo-grande {
+    font-size: 36px;
+    font-weight: bold;
+    margin-left: 15%;
+    margin-bottom: 5%;
+    color: #FFD700;
+    text-align: left;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-me-button {
+    margin-left: 15%;
+    margin-bottom: 5px;
+}
+
+.about-me-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8EBCB1;
+    color: #245254;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 20px;
+}
+
+.about-me-button a:hover {
+    background-color: #245254;
+    border: 1px solid #8EBCB1;
+    color: #8EBCB1;
+    padding: 9px 19px;
+    transition: 0.6;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    margin-left: 15%;
+    margin-top: 4%;
+    margin-bottom: 5%;
+}
+
+.social img {
+    width: 40px;
+    margin-right: 20px;
+    transition: width 0.2s, transform 0.2s, box-shadow 0.2s; 
+    cursor: pointer; 
+}
+
+
+.social img:hover {
+    transform: scale(1.3); 
+    /*box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8); */
+}
+
+
+
+.riga-info {
+    margin-top: 3.5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    background-color: #245254;
+}
+
+.colonna {
+    text-align: center;
+    width: 30%;
+    border-right: 1px solid #ffffff;
+}
+
+.colonna:last-child {
+    border-right: none;
+}
+
+.riga-info p {
+    margin: 0;
+    font-style: italic;
+}
+
+.animate-riga-info {
+    animation: slideIn 1s ease-out;
+    opacity: 1;
+}
+
+.number {
+    font-size: 50px;
+    font-weight: bold;
+    font-style: italic;
+    color: #FFD700;
+}
+
+.descrizione {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+}
+
+.spazio {
+    height: 20vh;
+    background-color: #D9D9D9;
+}
+
+.spazio h1{
+    color: #245254;
+    padding-top: 100px;
+    margin-left: 125px;
+}
+
+.trasparente {
+    height: 80vh;
+    background-color: transparent;
+    position: relative;
+}
+
+.contattami {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    background-color: #245254;
+    color: #ffffff;
+    padding: 40px;
+    /*   border-radius: 20px ;*/
+}
+
+.contattami h1 {
+    color: #8EBCB1;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.contattami p {
+    color: #D9D9D9;
+    font-size: 25px;
+}
+
+.contact-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #245254;
+    color: #8EBCB1;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 20px;
+    border: 1px solid #8EBCB1;
+}
+
+.contact-button a:hover {
+    background-color: #8EBCB1;
+    color: #245254;
+    transition: 0.6;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    background-color: #D9D9D9;
+    padding: 20px 0px 100px 0px;
+    overflow: auto;
+    justify-content: center;
+}
+
+.info-block {
+    flex: 1;
+    flex-wrap: wrap;
+    background-color: #245254;
+    /* Bianco */
+    padding: 20px;
+    overflow: auto;
+    max-width: calc(40% - 20px);
+
+}
+
+.info-block p {
+    font-size: 18px;
+    color: #D9D9D9;
+}
+
+.info-block h1 {
+    color: #8EBCB1;
+}
+
+.collaborazioni {
+    background-color: #fff;
+    display: grid;
+    grid-template-rows: auto 1fr; 
+    max-width: 100%;
+    padding: 100px 100px 100px 100px;
+    height: 50%;
+}
+
+.titolo-collab {
+    text-align: left;  
+    padding-left: 2%;
+    padding-bottom: 30px;
+    color: #245254;
+}
+
+.contenitore-carte {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+
+.collaborazioni .card {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+}
+
+.collaborazioni .card img {
+    width: 100%;
+    height: auto;
+    max-width: 80%;
+}
+
+.recensioni-totale {
+    background-color: #D9D9D9;
+    padding: 100px 100px; 
+}
+
+.titolo-recensioni {
+    text-align: left;
+    padding-left: 2%;   
+    color: #245254;
+}
+
+.recensioni {  
+    background-color: #D9D9D9; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Modificato il minmax per la griglia */
+    gap: 25px;
+    justify-content: center; /* Centra le immagini */
+}
+
+.recensione-img {
+    max-width: 100%; /* Per garantire la responsività */
+    height: auto; /* Per mantenere l'aspetto */
+    display: block; /* Elimina spazi bianchi verticali */
+    border-radius: 10px; /* Puoi mantenere questa proprietà se vuoi un bordo arrotondato */
+    transition: all 0.5s;
+    margin-bottom: 20px;
+    
+}
+
+.recensione-img:hover {
+    opacity: 0.8; /* Esempio di effetto hover */
+}
+
+.footer {
+    background-color: #2c2c2c;
+    color: #ffffff;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    font-size: 20px;
+}
+
+.footer-column {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .social-icons img {
+    width: 25px;
+    margin: 0 5px;
+}
+
+
+
+
+/*  tenere nel caso in cui serva inserire un social con i follower*/
+
+/*.nickname {
+    font-size: 23px;
+    margin-right: 10%;
+}
+
+.followers {
+    font-size: 17px;
+    color: #8EBCB1;
+    /* Colore del testo per i follower 
+}*/
+
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+    body::before {
+        overflow: hidden;
+        display: none;
+    }
+
+    .main-container {
+        background: url('sources/wallpaper_mobile.png')center/cover no-repeat;
+        width: 100%;
+    }
+
+    .main-page {
+        flex-direction: column;
+        /* Cambia la direzione del flexbox */
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 10%;
+    }
+
+    .nav-links {
+        display: flex;
+        margin-right: 0;
+        padding: 0;
+        padding-top: 50px;
+    }
+
+    .nav-links a {
+        color: #8EBCB1;
+        text-decoration: none;
+        float: right;
+        right: 0;
+        font-weight: bold;
+        font-size: 15px;
+        transition: transform 0.5s;
+        /* Aggiunta della transizione per la trasformazione */
+    }
+
+    .logo img {
+        height: 50px;
+        padding-left: 5px;
+        padding-top: 50px;
+        margin-right: 15px;
+    }
+
+    .right-column,
+    .left-column {
+        width: 100%;
+        /* Le colonne occuperanno tutta la larghezza disponibile */
+    }
+
+    .left-column {
+        padding: 0;
+        margin: 0;
+        align-items: center;
+    }
+
+    .about-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+        margin-top: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-item img {
+        visibility: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    .laurea {
+        margin: 0;
+        margin-top: 30px;
+        font-size: 23px;
+        margin-right: 15%;
+        text-align: center;
+    }
+
+    .titolo-piccolo {
+        font-size: 22px;
+        margin: 0;
+        margin-top: 5%;
+        color: #8EBCB1;
+        font-style: italic;
+        text-align: center;
+        /* Allinea a sinistra */
+    }
+
+    .titolo-grande {
+        font-size: 23px;
+        margin: 0;
+        font-weight: bold;
+        margin-bottom: 5%;
+        color: #FFD700;
+        text-align: center;
+        /* Allinea a sinistra */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .social {
+        padding-top: 20px;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        margin-bottom: 3%;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .social img {
+        margin: 0;
+        width: 40px;
+        transition: filter 0.s;
+    }
+
+    .social img:hover {
+        filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+    }
+
+    .about-me-button {
+        margin: 0;
+    }
+
+    .about-me-button a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #8EBCB1;
+        color: #245254;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        font-size: 20px;
+    }
+
+    .about-me-button a:hover {
+        background-color: #245254;
+        border: 1px solid #8EBCB1;
+        color: #8EBCB1;
+        padding: 9px 19px;
+        transition: 0.6;
+    }
+
+    .right-column {
+        margin: 0;
+        padding: 0;
+    }
+
+    .right-column img {
+        margin-left: 0;
+        /* Centra l'immagine se necessario */
+        width: 280px;
+        height: auto;
+        margin-bottom: 0;
+        filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.5));
+    }
+
+    .riga-info {
+        flex-direction: column;
+        /* Cambia la direzione del flexbox per una colonna */
+        height: auto;
+        /* O, se vuoi una certa altezza, puoi specificarla qui */
+        padding-top: 150px;
+        background-color: #D9D9D9;
+        /*       border-bottom: 1px solid #245254;*/
+    }
+
+    .colonna {
+        width: 100%;
+        border-right: none;
+        margin-bottom: 10px;
+        padding-top: 25px;
+    }
+
+    .riga-info .colonna:last-child {
+        margin-bottom: 30px;
+    }
+
+
+    .number {
+        font-size: 25px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .descrizione {
+        font-size: 25px;
+    }
+
+    .trasparente {
+        height: 50vh;
+        background: url("sources/pannocchie.jpg")center/cover no-repeat;
+        position: relative;
+
+    }
+
+
+    .contattami {
+        top: 50%;
+        left: 15%;
+        padding: 25px;
+        text-align: center;
+        /*   border-radius: 20px ;*/
+    }
+
+    .contattami h1 {
+        font-size: 15px;
+        text-align: left;
+    }
+
+    .contattami p {
+        font-size: 18px;
+        text-align: left;
+    }
+
+    .contact-button a {
+        font-size: 15px;
+        
+    }
+
+    .spazio{
+        height: 10vh;
+    }
+
+    .spazio h1{
+        font-size: 20px;
+        padding-top: 70px;
+        margin-left: 55px;
+        margin-top: 0;
+    }
+
+    .info {
+        flex-direction: column;
+        /* Cambia la direzione del flexbox per una colonna */
+        align-items: center; /* Centra gli elementi lungo l'asse trasversale */
+        gap: 20px; /* Aggiunto uno spazio tra i blocchi per una migliore leggibilità */
+    }
+
+    .info-block {
+        max-width: 70%; 
+    }
+
+    .info-block h1{
+        font-size: 20px;
+    }
+
+    .info-block p{
+        font-size: 15px;
+    }
+
+    .collaborazioni {
+        padding: 50px 20px; /* Ridimensionato il padding per dispositivi mobili */
+    }
+
+    .contenitore-carte {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Aumentato il minmax per adattarsi meglio ai dispositivi mobili */
+    }
+
+    .recensioni-totale {
+        padding: 50px 20px; /* Ridimensionato il padding per dispositivi mobili */
+    }
+
+    .recensioni {
+        grid-template-columns: 1fr; /* Una colonna per dispositivi mobili */
+        gap: 15px;
+    }
+    
+    .titolo-recensioni{
+        text-align: left;
+        font-size: 10px;
+        margin-left: 10px;
+    }
+
+    .footer{
+        flex-direction: column;
+        font-size: 15px;
+    }
+
+    .footer-column {
+        flex-basis: 100%;  /* Questo fa in modo che ogni colonna del footer occupi l'intera larghezza */
+        margin-bottom: 20px; /* Aggiungi uno spazio tra le colonne del footer in modalità mobile */
+    }
+
+
+}
