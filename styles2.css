@@ -4,10 +4,6 @@
     border: 1px solid green;
 }
 
-html {
-    overflow-x: hidden;
-    max-width: 100%;
-}
 
 html,
 body {
