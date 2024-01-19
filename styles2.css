@@ -8,6 +8,8 @@
 html,
 body {
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -213,9 +215,9 @@ body {
 
 
     .card {
-        width: 70%;
+        width: 80%;
         min-height: auto;
-        padding: 0px;
+        padding: 10px;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -228,8 +230,6 @@ body {
         font-size: 18px;
         text-align: center;
     }
-
-
 
     .sezione-destra {
         padding-top: 0px;

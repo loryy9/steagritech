@@ -116,7 +116,7 @@ body::before {
 }
 
 .titolo-piccolo {
-    font-size: 25px;
+    font-size: 20px;
     margin-left: 15%;
     color: #8EBCB1;
     font-style: italic;
@@ -247,6 +247,7 @@ body::before {
     background-color: #245254;
     color: #ffffff;
     padding: 40px;
+    width: 20%;
     /*   border-radius: 20px ;*/
 }
 
@@ -254,11 +255,13 @@ body::before {
     color: #8EBCB1;
     font-size: 25px;
     font-weight: 300;
+
 }
 
 .contattami p {
     color: #D9D9D9;
     font-size: 25px;
+    width: 90%;
 }
 
 .contact-button a {
@@ -443,15 +446,19 @@ body::before {
 }
 
 @media only screen and (max-width: 768px) {
-    /*html{
-        background-color: #245254;    
-    }*/
+    *{
+        /*background-color: #245254; */
+        border: 1px solid green        
+    }
     body {
         overflow-x: hidden;
+        background-color: #D9D9D9
     }
+
     body::before {
         overflow: hidden;
         display: none;
+        ;
     }
 
     .main-container {
@@ -518,21 +525,18 @@ body::before {
     }
 
     .about-item img {
-        visibility: hidden;
-        margin: 0;
-        padding: 0;
+        display: none;
     }
 
     .laurea {
         margin: 0;
-        margin-top: 30px;
         font-size: 23px;
-        margin-right: 15%;
         text-align: center;
+        padding: 2%;
     }
 
     .titolo-piccolo {
-        font-size: 22px;
+        font-size: 19px;
         margin: 0;
         margin-top: 5%;
         color: #8EBCB1;
@@ -603,15 +607,15 @@ body::before {
         margin-left: 0;
         width: 280px;
         margin-top: 0;
+        height: auto;
         margin-bottom: 0;
-	height: auto;
         filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.5));
     }
 
     .riga-info {
         flex-direction: column;
         height: auto;
-        margin-top: auto;
+        margin-top: 0;
         padding-top: auto;
         background-color: #D9D9D9;
         /*       border-bottom: 1px solid #245254;*/
@@ -630,7 +634,7 @@ body::before {
 
 
     .number {
-        font-size: 25px;
+        font-size: 45px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
@@ -640,19 +644,25 @@ body::before {
 
     .trasparente {
         height: 50vh;
-        background: url("sources/pannocchie.jpg")center/cover no-repeat;
+        background: url("sources/pannocchie.jpg") center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: relative;
-
     }
-
 
     .contattami {
-        top: 50%;
-        left: 15%;
+        background-color: #245254;
+        color: #ffffff;
         padding: 25px;
-        text-align: center;
-        /*   border-radius: 20px ;*/
-    }
+        text-align: left;
+        width: 50%;
+        /* Aggiungi la proprietà position:relative per posizionare .contattami correttamente rispetto a .trasparente */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }  
 
     .contattami h1 {
         font-size: 15px;
@@ -662,6 +672,7 @@ body::before {
     .contattami p {
         font-size: 18px;
         text-align: left;
+        margin: 0;
     }
 
     .contact-button a {
@@ -699,7 +710,7 @@ body::before {
     }
 
     .collaborazioni {
-        padding: 50px 20px;
+        padding: 50px 20px 0px 20px;
     }
 
     .contenitore-carte {
