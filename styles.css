@@ -446,10 +446,10 @@ body::before {
 }
 
 @media only screen and (max-width: 768px) {
-    *{
+    /**{
         /*background-color: #245254; */
-        border: 1px solid green        
-    }
+    /*    border: 1px solid green        
+    }*/
     body {
         overflow-x: hidden;
         background-color: #D9D9D9
