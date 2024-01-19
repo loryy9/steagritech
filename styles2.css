@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital@0;1&display=swap');
+*{
+    border: 1px solid green;
+}
+html{
+    overflow-x: hidden;
+    max-width: 100%;
+}
 html, body {
     height: 100%;
 }
@@ -8,9 +15,8 @@ body {
     padding: 0;
     font-family: 'Figtree', sans-serif;
     position: relative;
-    background: url('sources/wallpaper-tot.png') center/cover no-repeat fixed; /* Sfondo fisso */
+    background: url('sources/wallpaper-tot.png') center/cover no-repeat fixed; 
     background-size: cover;
-    overflow-x: hidden;
 }
 
 .navbar {
@@ -53,12 +59,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: auto; /* Altezza automatica per adattarsi al contenuto */
+    background-color: #245254;
+    height: auto; 
 }
 
 .card {
     width: 70%;
-    min-height: 70vh; /* Altezza minima per ogni carta */
+    min-height: 70vh; 
     background-color: rgba(255,255,255, 0.2);
     border-radius: 10px;
     padding: 20px;
@@ -71,13 +78,11 @@ body {
     justify-content: center;
 }
 .left {
-    transform: translateX(-100%); /* Fuori a sinistra */
-
+    transform: translateX(-100%); 
 }
 
 .right {
-    transform: translateX(100%); /* Fuori a destra */
-
+    transform: translateX(100%); 
 }
 
 .sezione-sinistra{
@@ -186,7 +191,6 @@ body {
         font-weight: bold;
         font-size: 15px;
         transition: transform 0.5s;
-        /* Aggiunta della transizione per la trasformazione */
     }
     .logo img {
         height: 50px;
@@ -203,21 +207,21 @@ body {
         display: none;
     }
 
-    /* Imposta il layout delle carte in modo che il contenuto sia visualizzato come una singola colonna */
+   
     .card {
-        width: 70%; /* Ad esempio, puoi regolare la larghezza come preferisci */
-        min-height: auto; /* Rimuovi l'altezza minima per adattarsi al contenuto */
-        padding: 0px; /* Aggiungi padding per separare il contenuto dal bordo della carta */
-        box-sizing: border-box; /* Assicurati che il padding non aumenti le dimensioni della carta */
-        display: flex; /* Utilizza un layout flex per allineare il contenuto come una singola colonna */
-        flex-direction: column; /* Imposta il layout come colonna */
-        align-items: center; /* Allinea il contenuto al centro se necessario */
+        width: 70%;
+        min-height: auto;
+        padding: 0px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .sezione-sinistra h1,
     .sezione-sinistra p,
     .sezione-destra p {
-        font-size: 18px; /* Riduci il font-size */
-        text-align: center; /* Centra il testo */
+        font-size: 18px; 
+        text-align: center; 
     }
 
 
@@ -237,8 +241,8 @@ body {
     }
 
     .footer-column {
-        flex-basis: 100%;  /* Questo fa in modo che ogni colonna del footer occupi l'intera larghezza */
-        margin-bottom: 20px; /* Aggiungi uno spazio tra le colonne del footer in modalità mobile */
+        flex-basis: 100%;
+        margin-bottom: 20px;
     }
 
 }

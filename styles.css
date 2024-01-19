@@ -1,10 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital@0;1&display=swap');
+/**{
+    border: 1px solid green;
+}*/
+
+html{
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Figtree', sans-serif;
     position: relative;
-    overflow-x: hidden;
 }
 
 body::before {
@@ -355,23 +363,23 @@ body::before {
 .recensioni {  
     background-color: #D9D9D9; 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Modificato il minmax per la griglia */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
-    justify-content: center; /* Centra le immagini */
+    justify-content: center;
 }
 
 .recensione-img {
-    max-width: 100%; /* Per garantire la responsività */
-    height: auto; /* Per mantenere l'aspetto */
-    display: block; /* Elimina spazi bianchi verticali */
-    border-radius: 10px; /* Puoi mantenere questa proprietà se vuoi un bordo arrotondato */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
     transition: all 0.5s;
     margin-bottom: 20px;
     
 }
 
 .recensione-img:hover {
-    opacity: 0.8; /* Esempio di effetto hover */
+    opacity: 0.8;
 }
 
 .footer {
@@ -434,8 +442,6 @@ body::before {
     }
 }
 
-
-
 @media only screen and (max-width: 768px) {
 
     body {
@@ -449,11 +455,12 @@ body::before {
     .main-container {
         background: url('sources/wallpaper_mobile.png')center/cover no-repeat;
         width: 100%;
+        
     }
 
     .main-page {
         flex-direction: column;
-        /* Cambia la direzione del flexbox */
+        height: fit-content;
     }
 
     .navbar {
@@ -479,7 +486,6 @@ body::before {
         font-weight: bold;
         font-size: 15px;
         transition: transform 0.5s;
-        /* Aggiunta della transizione per la trasformazione */
     }
 
     .logo img {
@@ -492,7 +498,6 @@ body::before {
     .right-column,
     .left-column {
         width: 100%;
-        /* Le colonne occuperanno tutta la larghezza disponibile */
     }
 
     .left-column {
@@ -531,7 +536,6 @@ body::before {
         color: #8EBCB1;
         font-style: italic;
         text-align: center;
-        /* Allinea a sinistra */
     }
 
     .titolo-grande {
@@ -541,7 +545,6 @@ body::before {
         margin-bottom: 5%;
         color: #FFD700;
         text-align: center;
-        /* Allinea a sinistra */
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
@@ -591,23 +594,23 @@ body::before {
     .right-column {
         margin: 0;
         padding: 0;
+        min-height: fit-content;
     }
 
     .right-column img {
         margin-left: 0;
-        /* Centra l'immagine se necessario */
         width: 280px;
-        height: auto;
+        margin-top: 0;
+        height: fit-content;
         margin-bottom: 0;
         filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.5));
     }
 
     .riga-info {
         flex-direction: column;
-        /* Cambia la direzione del flexbox per una colonna */
         height: auto;
-        /* O, se vuoi una certa altezza, puoi specificarla qui */
-        padding-top: 150px;
+        margin-top: auto;
+        padding-top: auto;
         background-color: #D9D9D9;
         /*       border-bottom: 1px solid #245254;*/
     }
@@ -677,9 +680,8 @@ body::before {
 
     .info {
         flex-direction: column;
-        /* Cambia la direzione del flexbox per una colonna */
-        align-items: center; /* Centra gli elementi lungo l'asse trasversale */
-        gap: 20px; /* Aggiunto uno spazio tra i blocchi per una migliore leggibilità */
+        align-items: center;
+        gap: 20px;
     }
 
     .info-block {
@@ -695,19 +697,19 @@ body::before {
     }
 
     .collaborazioni {
-        padding: 50px 20px; /* Ridimensionato il padding per dispositivi mobili */
+        padding: 50px 20px;
     }
 
     .contenitore-carte {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Aumentato il minmax per adattarsi meglio ai dispositivi mobili */
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
 
     .recensioni-totale {
-        padding: 50px 20px; /* Ridimensionato il padding per dispositivi mobili */
+        padding: 50px 20px;
     }
 
     .recensioni {
-        grid-template-columns: 1fr; /* Una colonna per dispositivi mobili */
+        grid-template-columns: 1fr;
         gap: 15px;
     }
     
@@ -723,8 +725,8 @@ body::before {
     }
 
     .footer-column {
-        flex-basis: 100%;  /* Questo fa in modo che ogni colonna del footer occupi l'intera larghezza */
-        margin-bottom: 20px; /* Aggiungi uno spazio tra le colonne del footer in modalità mobile */
+        flex-basis: 100%;
+        margin-bottom: 20px;
     }
 
 
