@@ -173,7 +173,8 @@ body {
     margin: 0 5px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {ù
+    
     .navbar {
         display: flex;
         justify-content: center;
@@ -205,7 +206,9 @@ body {
         padding-top: 50px;
         margin-right: 15px;
     }
-
+    .main-container{
+        overflow-x: hidden;
+    }
     .card-container {
         margin-top: 90px;
         ;
