@@ -458,13 +458,11 @@ body::before {
     body::before {
         overflow: hidden;
         display: none;
-        ;
     }
 
     .main-container {
         background: url('sources/wallpaper_mobile.png')center/cover no-repeat;
         width: 100%;
-        
     }
 
     .main-page {
@@ -613,6 +611,7 @@ body::before {
         height: auto;
         margin-bottom: 0;
         filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.5));
+        display: block;
     }
 
     .riga-info {
