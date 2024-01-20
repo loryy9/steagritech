@@ -77,7 +77,7 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    overflow-y: hidden;   /*AGGIUNTO PRIMA DI USCIRE*/
 }
 
 .right-column img {
