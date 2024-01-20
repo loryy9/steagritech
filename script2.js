@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     easing: 'easeOutExpo',
                     duration: 1500
                 });
-                this.destroy(); // Una volta entrata la carta, distruggi il waypoint per evitare ripetizioni
+                this.destroy(); 
             },
-            offset: '90%' // Quando la carta è al 90% all'interno della viewport
+            offset: '90%' 
         });
     });
 });

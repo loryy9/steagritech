@@ -5,7 +5,9 @@
     border: 1px solid green;
 }
 }*/
-
+html{
+    overflow-x: hidden;
+}
 
 html,
 body {
