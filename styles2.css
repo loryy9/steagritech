@@ -171,6 +171,23 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+    html{
+        overflow-x: hidden;
+    }
+    body {
+        background-color: #245254
+    }
+    .main-container {
+        background: url('sources/wallpaper_mobile.png')center/cover no-repeat;
+        width: 100%;
+        
+    }
+
+    .main-page {
+        flex-direction: column;
+        height: fit-content;
+    }
+
     .navbar {
         display: flex;
         justify-content: center;
