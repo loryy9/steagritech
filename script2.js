@@ -14,7 +14,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
                 this.destroy(); 
             },
-            offset: '90%' 
+            offset: isMobile() ? '70%' : '90%'  // Usa '50%' per dispositivi mobili, altrimenti '90%'
         });
     });
+
+    // Funzione per verificare se il dispositivo è mobile
+    function isMobile() {
+        return window.innerWidth <= 768;  // Puoi regolare questo valore in base alle tue esigenze
+    }
 });
