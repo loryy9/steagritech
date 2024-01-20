@@ -204,8 +204,14 @@ body {
         float: right;
         right: 0;
         font-weight: bold;
-        font-size: 15px;
+        font-size: 80%;
         transition: transform 0.5s;
+    }
+
+    .nav-links a:last-child{
+        margin-right: 0px;
+        margin-left: 15px;
+        padding: 0;
     }
 
     .logo img {
