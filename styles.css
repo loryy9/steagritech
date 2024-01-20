@@ -692,8 +692,9 @@ body::before {
     .spazio h1{
         font-size: 20px;
         padding-top: 70px;
-        margin-left: 55px;
         margin-top: 0;
+        margin: 0;
+        text-align: center;
     }
 
     .info {
@@ -716,6 +717,14 @@ body::before {
 
     .collaborazioni {
         padding: 50px 20px 0px 20px;
+        font-size: 10px;
+    }
+
+    .titolo-collab{
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 20px;
     }
 
     .contenitore-carte {
@@ -732,9 +741,8 @@ body::before {
     }
     
     .titolo-recensioni{
-        text-align: left;
+        text-align: center;
         font-size: 10px;
-        margin-left: 10px;
     }
 
     .footer{
