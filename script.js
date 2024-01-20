@@ -1,3 +1,26 @@
+function animateColumns() {
+    anime({
+        targets: '#leftColumn',
+        translateX: [-200, 0],
+        opacity: [0, 1],
+        easing: 'easeOutQuad',
+        duration: 1000
+    });
+
+    anime({
+        targets: '#rightColumn',
+        translateX: [200, 0],
+        opacity: [0, 1],
+        easing: 'easeOutQuad',
+        duration: 1000
+    });
+}
+
+// Chiamare la funzione all'avvio della pagina
+window.onload = function () {
+    animateColumns();
+};
+
 document.addEventListener("DOMContentLoaded", function () {
     // Funzione per verificare se è un dispositivo mobile
     function isMobile() {
@@ -67,4 +90,9 @@ document.addEventListener("DOMContentLoaded", function () {
             rect.right <= (window.innerWidth || document.documentElement.clientWidth)
         );
     }
+
+    // Aggiungi il supporto touchstart per dispositivi mobili
+    document.addEventListener("touchstart", function () {
+        waypoint.context.refresh();
+    });
 });
