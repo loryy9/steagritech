@@ -598,15 +598,13 @@ body::before {
     }
 
     .right-column {
-        margin: 0;
-        padding: 0;
-        min-height: fit-content;
-        overflow-y: hidden;   /*AGGIUNTO PRIMA DI USCIRE*/
+        max-height: calc(55vh - 28px); /* 28px rappresenta la somma delle eventuali altezze di margini o padding */
+        overflow-y: hidden;
     }
 
     .right-column img {
         margin-left: 0;
-        width: 280px;
+        width: 65%;
         margin-top: 0;
         height: auto;
         margin-bottom: 0;
