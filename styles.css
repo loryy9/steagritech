@@ -61,6 +61,12 @@ body::before {
     transition: transform 0.5s;
 }
 
+.nav-links .home{
+    color: black;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+
 .nav-links a:hover {
     transform: translateY(-5px);
     color: black;
