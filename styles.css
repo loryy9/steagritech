@@ -499,7 +499,7 @@ body::before {
         float: right;
         right: 0;
         font-weight: bold;
-        font-size: 80%;
+        font-size: 90%;
         transition: transform 0.5s;
     }
 
