@@ -1,27 +1,18 @@
 function openPopup() {
     var popup = document.getElementById("popup");
-    anime({
-        targets: popup,
-        opacity: [0, 1],
-        easing: 'easeInOutQuad',
-        duration: 300,
-        begin: function () {
-            popup.style.display = 'block';
-        }
-    });
+
+    popup.style.display = 'block';
+    void popup.offsetWidth; // Forza il reflow per garantire che la transizione funzioni
+    popup.classList.add('open');
 }
 
 function closePopup() {
     var popup = document.getElementById("popup");
-    anime({
-        targets: popup,
-        opacity: [1, 0],
-        easing: 'easeInOutQuad',
-        duration: 300,
-        complete: function () {
-            popup.style.display = 'none';
-        }
-    });
+
+    popup.classList.remove('open');
+    setTimeout(function () {
+        popup.style.display = 'none';
+    }, 500); // Assicura che la transizione sia completata prima di nascondere definitivamente
 }
 
 function animateColumns() {
