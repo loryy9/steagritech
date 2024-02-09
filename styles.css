@@ -3,7 +3,7 @@
     border: 1px solid green;
 }*/
 
-html{
+html {
     overflow-x: hidden;
     max-width: 100%;
 }
@@ -50,6 +50,7 @@ body::before {
     display: flex;
     margin-right: 50px;
     padding-top: 90px;
+
 }
 
 .nav-links a {
@@ -57,19 +58,22 @@ body::before {
     text-decoration: none;
     margin-left: 20px;
     font-weight: bold;
-    font-size: 23px;
-    transition: transform 0.5s;
+    font-size: 20px;
+    transition: background-color 0.2s;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
-.nav-links .home{
-    color: black;
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
+.nav-links .select {
+    background-color: #245254;
+    color: #8EBCB1;
 }
 
 .nav-links a:hover {
-    transform: translateY(-5px);
-    color: black;
+    background-color: #245254;
+    color: #8EBCB1;
 }
 
 .main-page {
@@ -83,7 +87,7 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 
 .right-column img {
@@ -174,13 +178,13 @@ body::before {
 .social img {
     width: 40px;
     margin-right: 20px;
-    transition: width 0.2s, transform 0.2s, box-shadow 0.2s; 
-    cursor: pointer; 
+    transition: width 0.2s, transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
 }
 
 
 .social img:hover {
-    transform: scale(1.3); 
+    transform: scale(1.3);
     /*box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8); */
 }
 
@@ -193,8 +197,10 @@ body::before {
     align-items: center;
     height: 200px;
     background-color: #245254;
-    opacity: 1; /* Opacità iniziale a 0 */
-    transition: opacity 1s ease-out; /* Transizione dell'opacità */
+    opacity: 1;
+    /* Opacità iniziale a 0 */
+    transition: opacity 1s ease-out;
+    /* Transizione dell'opacità */
 }
 
 .colonna {
@@ -233,7 +239,7 @@ body::before {
     background-color: #D9D9D9;
 }
 
-.spazio h1{
+.spazio h1 {
     color: #245254;
     padding-top: 100px;
     margin-left: 125px;
@@ -288,6 +294,51 @@ body::before {
     transition: 0.6;
 }
 
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #245254;
+    color: #ffffff;
+    padding: 70px;
+    z-index: 1000;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup-content h2 {
+    font-size: 25px;
+}
+
+.popup-content p {
+    font-size: 20px;
+}
+
+.popup button {
+    background-color: #8EBCB1;
+    color: #245254;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.popup button:hover {
+    color: #8EBCB1;
+    background-color: #245254;
+    border: 1px solid #8EBCB1;
+    margin-top: 8px;
+}
+
 .info {
     display: flex;
     flex-wrap: wrap;
@@ -321,14 +372,14 @@ body::before {
 .collaborazioni {
     background-color: #fff;
     display: grid;
-    grid-template-rows: auto 1fr; 
+    grid-template-rows: auto 1fr;
     max-width: 100%;
     padding: 100px 100px 100px 100px;
     height: 50%;
 }
 
 .titolo-collab {
-    text-align: left;  
+    text-align: left;
     padding-left: 2%;
     padding-bottom: 30px;
     color: #245254;
@@ -360,17 +411,17 @@ body::before {
 
 .recensioni-totale {
     background-color: #D9D9D9;
-    padding: 100px 100px; 
+    padding: 100px 100px;
 }
 
 .titolo-recensioni {
     text-align: left;
-    padding-left: 2%;   
+    padding-left: 2%;
     color: #245254;
 }
 
-.recensioni {  
-    background-color: #D9D9D9; 
+.recensioni {
+    background-color: #D9D9D9;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
@@ -384,7 +435,7 @@ body::before {
     border-radius: 10px;
     transition: all 0.5s;
     margin-bottom: 20px;
-    
+
 }
 
 .recensione-img:hover {
@@ -452,6 +503,7 @@ body::before {
 }
 
 @media only screen and (max-width: 768px) {
+
     /**{
         /*background-color: #245254; */
     /*    border: 1px solid green        
@@ -494,19 +546,27 @@ body::before {
     }
 
     .nav-links a {
+        background-color: transparent;
         color: #8EBCB1;
         text-decoration: none;
         float: right;
         right: 0;
-        font-weight: bold;
-        font-size: 90%;
-        transition: transform 0.5s;
+        font-size: 15px;
+        margin-left: 10px;
+        padding: 5px 10px;
     }
 
-    .nav-links a:last-child{
-        margin-right: 0px;
-        margin-left: 15px;
-        padding: 0;
+    .nav-links a:last-child {
+        margin-right: 5px;
+    }
+
+    .nav-links a:first-child {
+        margin-left: 20px;
+    }
+
+    .nav-links .select {
+        background-color: #8EBCB1;
+        color: #245254;
     }
 
     .logo img {
@@ -610,7 +670,8 @@ body::before {
     }
 
     .right-column {
-        max-height: calc(55vh - 28px); /* 28px rappresenta la somma delle eventuali altezze di margini o padding */
+        max-height: calc(55vh - 28px);
+        /* 28px rappresenta la somma delle eventuali altezze di margini o padding */
         overflow-y: hidden;
     }
 
@@ -673,7 +734,7 @@ body::before {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-    }  
+    }
 
     .contattami h1 {
         font-size: 15px;
@@ -684,18 +745,19 @@ body::before {
         font-size: 18px;
         text-align: left;
         margin: 0;
+        padding-bottom: 10px;
     }
 
     .contact-button a {
         font-size: 15px;
-        
+        padding-top: 10px;
     }
 
-    .spazio{
+    .spazio {
         height: 10vh;
     }
 
-    .spazio h1{
+    .spazio h1 {
         font-size: 20px;
         padding-top: 70px;
         margin-top: 0;
@@ -710,14 +772,14 @@ body::before {
     }
 
     .info-block {
-        max-width: 70%; 
+        max-width: 70%;
     }
 
-    .info-block h1{
+    .info-block h1 {
         font-size: 20px;
     }
 
-    .info-block p{
+    .info-block p {
         font-size: 15px;
     }
 
@@ -726,7 +788,7 @@ body::before {
         font-size: 10px;
     }
 
-    .titolo-collab{
+    .titolo-collab {
         text-align: center;
         margin: 0;
         padding: 0;
@@ -745,13 +807,13 @@ body::before {
         grid-template-columns: 1fr;
         gap: 15px;
     }
-    
-    .titolo-recensioni{
+
+    .titolo-recensioni {
         text-align: center;
         font-size: 10px;
     }
 
-    .footer{
+    .footer {
         flex-direction: column;
         font-size: 25px;
     }

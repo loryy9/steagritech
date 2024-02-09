@@ -17,7 +17,7 @@
                 <img src="sources/logo_bianco.png" alt="Logo">
             </div>
             <div class="nav-links">
-                <a href="index.html" class="home">HOME</a>
+                <a href="index.html" class="select">HOME</a>
                 <a href="chisono.html">CHI SONO</a>
             </div>
         </nav>
@@ -57,13 +57,23 @@
         <div class="trasparente">
             <div class="contattami">
                 <h1>SteAgritech</h1>
-                <p>Ti interessa quello che faccio e vorresti collaborare <br>con me?</p>
+                <p>Ti interessa quello che faccio e vorresti collaborare con me?</p>
                 <div class="contact-button">
-                    <a href="stefano.agritech@gmail.com">CONTATTAMI</a>
+                    <a href="javascript:void(0)" onclick="openPopup()">CONTATTAMI</a>
                 </div>
                 
             </div>
         </div>
+
+        <div class="popup" id="popup">
+            <div class="popup-content">                
+                <h2>Informazioni di contatto</h2>
+                <p>Lunedì - Venerdì 8:00 - 18:00</p>
+                <p>Email: stefano.agritech@gmail.com</p>                
+                <button onclick="closePopup()">Chiudi</button>
+            </div>
+        </div>
+
         <div class="spazio">
             <h1>Qualche curiosità</h1>
         </div>
@@ -85,13 +95,7 @@
             </div>
             <div class="contenitore-carte">
                 <div class="card">
-                    <img src="sources/Loghi Aziende/1.png" alt="Logo1">
-                </div>
-                <div class="card">
                     <img src="sources/Loghi Aziende/2.png" alt="Logo2">
-                </div>
-                <div class="card">
-                    <img src="sources/Loghi Aziende/3.png" alt="Logo3">
                 </div>
                 <div class="card">
                     <img src="sources/Loghi Aziende/4.png" alt="Logo4">
@@ -99,9 +103,12 @@
                 <div class="card">
                     <img src="sources/Loghi Aziende/5.png" alt="Logo5">
                 </div>
+                <div class="card">
+                    <img src="sources/Loghi Aziende/6.png" alt="Logo6">
+                </div>
             </div>
         </div>
-            <div class="recensioni-totale">
+           <!-- <div class="recensioni-totale">
                 <div class="titolo-recensioni">
                     <h1>Alcune recensioni</h1>
                 </div>
@@ -111,7 +118,7 @@
                     <img src="sources/commento.png" alt="Recensione 3" class="recensione-img">
                     <img src="sources/commento.png" alt="Recensione 4" class="recensione-img">
                 </div>
-            </div>
+            </div>-->
         <div class="footer">
             <div class="footer-column">
                 <a href="mailto:stefano.agritech@gmail.com">stefano.agritech@gmail.com</a>

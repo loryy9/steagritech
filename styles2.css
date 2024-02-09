@@ -23,7 +23,7 @@ body {
     overflow-x: hidden;
 }
 
-.main-container{
+.main-container {
     width: 100%;
 }
 
@@ -46,27 +46,31 @@ body {
 .nav-links {
     display: flex;
     margin-right: 50px;
-    padding-top: 35px;
+    padding-top: 25px;
+
 }
 
 .nav-links a {
-    color: #d9d9d9;
+    color: #8EBCB1;
     text-decoration: none;
     margin-left: 20px;
     font-weight: bold;
-    font-size: 23px;
-    transition: transform 0.5s;
+    font-size: 20px;
+    transition: background-color 0.2s;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
-.nav-links .chisono{
-    color: black;
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
+.nav-links .select {
+    background-color: #8EBCB1;
+    color: #245254;
 }
 
 .nav-links a:hover {
-    transform: translateY(-5px);
-    color: black;
+    background-color: #8EBCB1;
+    color: #245254;
 }
 
 .card-container {
@@ -205,19 +209,27 @@ body {
     }
 
     .nav-links a {
+        background-color: transparent;
         color: #8EBCB1;
         text-decoration: none;
         float: right;
         right: 0;
-        font-weight: bold;
-        font-size: 90%;
-        transition: transform 0.5s;
+        font-size: 15px;
+        margin-left: 10px;
+        padding: 5px 10px;
     }
 
-    .nav-links a:last-child{
-        margin-right: 0px;
-        margin-left: 15px;
-        padding: 0;
+    .nav-links a:last-child {
+        margin-right: 5px;
+    }
+
+    .nav-links a:first-child {
+        margin-left: 20px;
+    }
+
+    .nav-links .select {
+        background-color: #8EBCB1;
+        color: #245254;
     }
 
     .logo img {
