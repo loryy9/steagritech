@@ -214,8 +214,8 @@ body {
         text-decoration: none;
         float: right;
         right: 0;
-        font-size: 90%;
-        margin-left: 8px;
+        font-size: 80%;
+        margin-left: 10px;
         padding: 5px 10px;
     }
 
@@ -224,7 +224,7 @@ body {
     }
 
     .nav-links a:first-child {
-        margin-left: 10px;
+        margin-left: 15px;
     }
 
     .nav-links .select {
@@ -234,7 +234,7 @@ body {
 
     .logo img {
         height: 50px;
-        padding-left: 12px;
+        padding-left: 15px;
         padding-top: 47px;
         margin-right: 15px;
     }
