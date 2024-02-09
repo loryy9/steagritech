@@ -220,7 +220,7 @@ body {
     }
 
     .nav-links a:last-child {
-        margin-right: 5px;
+        margin-right: 3px;
     }
 
     .nav-links a:first-child {
@@ -234,9 +234,9 @@ body {
 
     .logo img {
         height: 50px;
-        padding-left: 15px;
-        padding-top: 47px;
-        margin-right: 15px;
+        padding-left: 12px;
+        padding-top: 44px;
+        margin-right: 12px;
     }
 
     .card-container {
