@@ -69,12 +69,28 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Aggiunta della parte per associare la funzione openPopup al click del link
-    var contactLink = document.querySelector(".about-me-button a");
-    if (contactLink) {
-        contactLink.addEventListener("click", function (event) {
+    // Aggiunta della parte per associare la funzione openPopup al click del link "Contattami"
+    var contattamiLink = document.querySelector(".contattami a");
+    if (contattamiLink) {
+        contattamiLink.addEventListener("click", function (event) {
             event.preventDefault();
             openPopup();
+        });
+    }
+
+    // Aggiunta della parte per associare la funzione closePopup al click del link "Chi sono"
+    var chiSonoLink = document.querySelector(".nav-links a[href='chisono.html']");
+    if (chiSonoLink) {
+        chiSonoLink.addEventListener("click", function (event) {
+            closePopup(); // Chiudi il popup quando viene cliccato il link "Chi sono"
+        });
+    }
+
+    // Aggiunta della parte per associare la funzione closePopup al click del link nel popup
+    var chiudiPopupLink = document.querySelector("#popup button");
+    if (chiudiPopupLink) {
+        chiudiPopupLink.addEventListener("click", function (event) {
+            closePopup(); // Chiudi il popup quando viene cliccato il link nel popup
         });
     }
 });
