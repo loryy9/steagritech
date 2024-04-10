@@ -22,12 +22,12 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('/sources/pannocchie.jpg') center/cover no-repeat fixed;
+    background: url('../sources/pannocchie.jpg') center/cover no-repeat fixed;
     z-index: -1;
 }
 
 .main-container {
-    background: url('/sources/wallpaper5.png') center/cover no-repeat;
+    background: url('../sources/wallpaper5.png') center/cover no-repeat;
     color: #ffffff;
     height: 110vh;
 }
@@ -536,7 +536,7 @@ body::before {
     }
 
     .main-container {
-        background: url('/sources/wallpaper_mobile.png')center/cover no-repeat;
+        background: url('../sources/wallpaper_mobile.png')center/cover no-repeat;
         width: 100%;
     }
 
@@ -733,7 +733,7 @@ body::before {
 
     .trasparente {
         height: 50vh;
-        background: url("/sources/pannocchie.jpg") center/cover no-repeat;
+        background: url("../sources/pannocchie.jpg") center/cover no-repeat;
         display: flex;
         align-items: center;
         justify-content: center;

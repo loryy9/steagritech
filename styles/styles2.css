@@ -18,7 +18,7 @@ body {
     padding: 0;
     font-family: 'Figtree', sans-serif;
     position: relative;
-    background: url('/sources/wallpaper-tot.png') center/cover no-repeat fixed;
+    background: url('../sources/wallpaper-tot.png') center/cover no-repeat fixed;
     background-size: cover;
     overflow-x: hidden;
 }
