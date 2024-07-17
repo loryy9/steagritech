@@ -762,12 +762,11 @@ body::before {
 
     .right-column img {
         margin-left: 0;
-        width: 75%;
-        margin-top: 0px;
+        width: 65%;
+        margin-top: 100px;
         height: auto;
         margin-bottom: 20px;
         display: block;
-        overflow: visible;
     }
 
     .riga-info {

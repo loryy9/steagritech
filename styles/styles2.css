@@ -112,9 +112,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: left;
+    text-align: justify;
     padding: 20px;
-    margin-left: 70px;
 }
 
 .sezione-sinistra h1 {
@@ -131,8 +130,6 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    text-align: right;
-    margin-right: 70px;
 }
 
 .sezione-destra p {
@@ -279,14 +276,9 @@ body {
         text-align: center;
     }
 
-    .sezione-sinistra{
-        margin-left: 0px;
-    }
-
     .sezione-destra {
         padding-top: 0px;
         margin-top: 0px;
-        margin-right: 0px;
     }
 
     .sezione-destra p {
