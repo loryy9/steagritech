@@ -35,7 +35,7 @@ function showCookieConsentBanner() {
         initializeYouTubeAPI(); // Chiama la tua funzione per l'inizializzazione dell'API di YouTube
     });
 
-    document.getElementById("deny-cookies").addEventListener("click", function () {
+    document.getElementById("denie-cookies").addEventListener("click", function () {
         setCookie(COOKIE_CONSENT_KEY, "false", 30); // Cookie valido per 1 giorno per test
         cookieConsentBanner.style.display = "none";
         console.log("Cookie consent denied and set.");
