@@ -26,12 +26,93 @@ body::before {
     z-index: -1;
 }
 
+.cookie-container {
+    width: 900px;
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f4f4f4;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 7px;    
+    font-size: 20px;
+}
+
+.cookie-text {
+    text-align: center;
+    padding: 0 100px;
+}
+
+.cookie-text p {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center;
+}
+
+.cookie-text p span {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+}
+
+.cookie-text p span img {
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.cookie-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 150px;
+    margin-top: 20px;
+}
+
+.cookie-button {
+    background: #245254;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #fff;
+    width: 100px;
+    text-align: center;
+}
+
+.cookie-button:hover{
+    background: #8EBCB1;
+    color: #245254;
+    transition: all .3s ease-in-out;
+}
+
+.accetta-rifiuta-cookie{
+    display: flex;
+}
+
+.altre-info-button{
+    background: #8EBCB1;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.altre-info-button:hover{
+    background: #245254;
+    color: #8EBCB1;
+    transition: all .3s ease-in-out;
+}
+
 .main-container {
     background: url('../sources/wallpaper5.png') center/cover no-repeat;
     color: #ffffff;
     height: 110vh;
 }
-
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -296,7 +377,8 @@ body::before {
     transition: 0.6;
 }
 
-.popup {
+.popup,
+.popup-info {
     display: none;
     position: fixed;
     bottom: 0;
@@ -305,7 +387,7 @@ body::before {
     background-color: #245254;
     color: #8EBCB1;
     padding: 70px;
-    z-index: 1000;
+    z-index: 1001;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     opacity: 0;
@@ -313,7 +395,8 @@ body::before {
     /* Aggiunto per transizioni fluide */
 }
 
-.popup.open {
+.popup.open,
+.popup-info.open {
     transform: translate(-50%, -50%);
     opacity: 1;
 }
@@ -335,7 +418,8 @@ body::before {
     color: #8EBCB1;
 }
 
-.popup button {
+.popup button,
+.popup-info button {
     background-color: #8EBCB1;
     color: #245254;
     padding: 10px 20px;
@@ -346,7 +430,8 @@ body::before {
     border-radius: 5px;
 }
 
-.popup button:hover {
+.popup button:hover,
+.popup-info button:hover {
     color: #8EBCB1;
     background-color: #245254;
     border: 1px solid #8EBCB1;
@@ -600,6 +685,41 @@ body::before {
         display: none;
     }
 
+    .cookie-container{
+        width: 100vw;
+        bottom: 0;
+    }
+
+    .cookie-text{
+        font-size: 15px;
+        padding: 15px;
+        width: 70%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .cookie-text p span img {
+        height: 20px;
+        margin-left: -2px;
+        margin-right: -2px;
+    }
+
+    .cookie-button-container{
+        flex-direction: column-reverse;;
+        gap: 10px;
+    }
+
+    .altre-info{
+        width: 70%;
+        text-align: center;
+    }
+
+    .accetta-rifiuta-cookie{
+        width: 70%;
+        justify-content: space-between;
+    }
+
     .main-container {
         background: url('../sources/wallpaper_mobile.png')center/cover no-repeat;
         width: 100%;
@@ -762,11 +882,12 @@ body::before {
 
     .right-column img {
         margin-left: 0;
-        width: 65%;
-        margin-top: 100px;
+        width: 75%;
+        margin-top: 0px;
         height: auto;
         margin-bottom: 20px;
         display: block;
+        overflow: visible;
     }
 
     .riga-info {
@@ -842,7 +963,8 @@ body::before {
         padding-top: 10px;
     }
 
-    .popup {
+    .popup,
+    .popup-info {
         padding: 40px;
     }
 

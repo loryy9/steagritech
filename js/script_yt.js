@@ -3,16 +3,14 @@ var CACHE_EXPIRATION_TIME_MS = 24 * 60 * 60 * 1000;
 
 var arr_url = [];
 
-document.addEventListener("DOMContentLoaded", function () {
+function initializeYouTubeAPI() {
     var cachedData = getDataFromCache();
-    //localStorage.removeItem(CACHE_KEY);  //COMANDO PER PULIRE CACHE
-
     if (cachedData) {
         processData(cachedData);
     } else {
         fetchAndCacheData();
     }
-});
+}
 
 function fetchAndCacheData() {
     fetch("https://www.googleapis.com/youtube/v3/search?key=AIzaSyCu5g2KWoXXhaE6TVmg-5UzCajAZok5czk&q=ste.agritech&type=video&part=snippet&maxResults=10&channelId=UCydT7lIVxMlR2rjylvI0zAg")
@@ -43,7 +41,7 @@ function processData(data) {
     recentVideos.forEach((video, index) => {
         arr_url.push(video.id.videoId);
         var url = "https://www.youtube.com/embed/" + video.id.videoId;
-        var iframe = document.getElementById("iframe0" + (index + 1)); 
+        var iframe = document.getElementById("iframe0" + (index + 1));
         iframe.src = url;
     });
 }
@@ -56,7 +54,7 @@ function useStaticUrls() {
     ];
 
     staticUrls.forEach((url, index) => {
-        var iframe = document.getElementById("iframe0" + (index + 1)); 
+        var iframe = document.getElementById("iframe0" + (index + 1));
         iframe.src = url;
     });
 }
@@ -80,4 +78,10 @@ function saveDataToCache(data) {
         timestamp: new Date().getTime()
     };
     localStorage.setItem(CACHE_KEY, JSON.stringify(cacheData));
+}
+
+// Funzione per pulire la cache
+function clearCache() {
+    localStorage.removeItem(CACHE_KEY);
+    console.log('Cache pulita');
 }
