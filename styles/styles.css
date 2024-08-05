@@ -791,11 +791,11 @@ body::before {
 
     .popup-info .close-btn {
         position: absolute;
-        top: 15px;
-        right: 30px;
+        top: 25px;
+        right: 40px;
         background: none;
         border: none;
-        font-size: 15px;
+        font-size: 17px;
         cursor: pointer;
         color: #245254;
         z-index: 1001;
