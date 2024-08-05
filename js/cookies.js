@@ -1,5 +1,6 @@
 var COOKIE_CONSENT_KEY = "cookieConsent";
 let btnInfo = document.getElementById("btn-info");
+var popup = document.getElementById("popup-info");
 
 // Funzione per impostare un cookie
 function setCookie(name, value, days) {
@@ -30,6 +31,7 @@ function showCookieConsentBanner() {
     cookieConsentBanner.style.display = "flex";
 
     document.getElementById("accept-cookies").addEventListener("click", function () {
+        popup.style.display = "none";
         setCookie(COOKIE_CONSENT_KEY, "true", 30); // Cookie valido per 1 giorno per test
         cookieConsentBanner.style.display = "none";
         console.log("Cookie consent accepted and set.");
@@ -37,6 +39,7 @@ function showCookieConsentBanner() {
     });
 
     document.getElementById("denie-cookies").addEventListener("click", function () {
+        popup.style.display = "none";
         setCookie(COOKIE_CONSENT_KEY, "false", 30); // Cookie valido per 1 giorno per test
         cookieConsentBanner.style.display = "none";
         console.log("Cookie consent denied and set.");
@@ -56,8 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
 let isopen = false;
 
 function openPopupInfo() {
-    var popup = document.getElementById("popup-info");
-
     popup.style.display = 'block';
     setTimeout(function () {
         popup.classList.add('open');
@@ -68,8 +69,6 @@ function openPopupInfo() {
 }
 
 function closePopupInfo() {
-    var popup = document.getElementById("popup-info");
-
     popup.classList.remove('open');
     setTimeout(function () {
         popup.style.display = 'none';
