@@ -28,13 +28,14 @@ body::before {
 
 .cookie-container {
     width: 900px;
+    height: 250px;
     position: fixed;
     bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
     background-color: #f4f4f4;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.7);
-    z-index: 1000;
+    /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); */
+    z-index: 1002;
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -106,6 +107,68 @@ body::before {
     background: #245254;
     color: #8EBCB1;
     transition: all .3s ease-in-out;
+}
+
+.popup-info {
+    display: block; 
+    position: fixed;
+    bottom: 100px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    background-color: #f4f4f4;
+    color: black;
+    padding: 20px;
+    border-radius: 7px;
+    z-index: 1001;
+    opacity: 1;
+    transition: all 0.5s ease;
+    pointer-events: none;
+}
+
+.popup-info.open {
+    bottom: 290px; 
+    pointer-events: all;
+}
+
+.popup-info .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #245254;
+    z-index: 1001;
+    transition: transform 0.3s ease; 
+}
+
+.popup-info .close-btn:hover {
+    transform: rotate(90deg); 
+}
+
+.popup-info-content {    
+    padding: 30px 100px 0px 100px;
+    position: relative;
+    font-size: 20px;
+}
+
+.popup-info-content button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #245254;
+}
+
+.popup-info-content p {
+    margin: 0;
+    padding: 20px 20px 20px 20px;
+    text-align: center;
 }
 
 .main-container {
@@ -377,8 +440,7 @@ body::before {
     transition: 0.6;
 }
 
-.popup,
-.popup-info {
+.popup{
     display: none;
     position: fixed;
     bottom: 0;
@@ -395,8 +457,9 @@ body::before {
     /* Aggiunto per transizioni fluide */
 }
 
-.popup.open,
-.popup-info.open {
+
+
+.popup.open {
     transform: translate(-50%, -50%);
     opacity: 1;
 }
@@ -418,8 +481,7 @@ body::before {
     color: #8EBCB1;
 }
 
-.popup button,
-.popup-info button {
+.popup button {
     background-color: #8EBCB1;
     color: #245254;
     padding: 10px 20px;
@@ -430,8 +492,7 @@ body::before {
     border-radius: 5px;
 }
 
-.popup button:hover,
-.popup-info button:hover {
+.popup button:hover{
     color: #8EBCB1;
     background-color: #245254;
     border: 1px solid #8EBCB1;
@@ -687,6 +748,7 @@ body::before {
 
     .cookie-container{
         width: 100vw;
+        height: fit-content;
         bottom: 0;
     }
 
@@ -718,6 +780,41 @@ body::before {
     .accetta-rifiuta-cookie{
         width: 70%;
         justify-content: space-between;
+    }
+
+    .popup-info {
+        width: 100vw;
+    }
+
+    .popup-info.open {
+        bottom: 320px; 
+        pointer-events: all;
+    }
+
+    .popup-info-content {    
+        font-size: 15px;
+        padding: 15px;
+        width: 80%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .popup-info-content p {
+        font-size: 14px;
+    }
+
+    .popup-info .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 30px;
+        background: none;
+        border: none;
+        font-size: 25px;
+        cursor: pointer;
+        color: #245254;
+        z-index: 1001;
+        transition: transform 0.3s ease; 
     }
 
     .main-container {
@@ -963,8 +1060,7 @@ body::before {
         padding-top: 10px;
     }
 
-    .popup,
-    .popup-info {
+    .popup{
         padding: 40px;
     }
 

@@ -56,10 +56,10 @@ function openPopupInfo() {
     var popup = document.getElementById("popup-info");
 
     popup.style.display = 'block';
-    void popup.offsetWidth; // Forza il reflow per garantire che la transizione funzioni
-    popup.classList.add('open');
+    setTimeout(function () {
+        popup.classList.add('open');
+    }, 10); // Slight delay to ensure the display property is set before adding the class
 }
-
 
 function closePopupInfo() {
     var popup = document.getElementById("popup-info");
