@@ -772,7 +772,7 @@ body::before {
     }
 
     .popup-info.open {
-        bottom: 190px; 
+        bottom: 210px; 
         pointer-events: all;
     }
 
@@ -795,7 +795,7 @@ body::before {
         right: 30px;
         background: none;
         border: none;
-        font-size: 25px;
+        font-size: 15px;
         cursor: pointer;
         color: #245254;
         z-index: 1001;
