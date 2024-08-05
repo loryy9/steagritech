@@ -101,6 +101,8 @@ body::before {
     margin: 0 10px;
     border-radius: 25px;
     cursor: pointer;
+    width: 150px;
+    text-align: center;
 }
 
 .altre-info-button:hover{
@@ -775,6 +777,11 @@ body::before {
     .altre-info{
         width: 70%;
         text-align: center;
+    }
+
+    .altre-info-button{
+        width: 80%;
+        
     }
 
     .accetta-rifiuta-cookie{

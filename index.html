@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="popup-info" id="popup-info">
-        <button class="close-btn" onclick="closePopupInfo()">&#10006;</button>
+        <button class="close-btn" id="close-popup" onclick="controlClosePopupInfo()">&#10006;</button>
         <div class="popup-info-content">                
             <p>Utilizziamo api di terze parti per visualizzare i video più recenti disponibili sul mio canale YouTube. Accettando i cookie avrò accesso ai tuoi dati sensibili. Ma non preoccuparti, se non vuoi accettarli potrai comunque navigare nel sito senza vedere i video più recenti su YouTube</p>
         </div>
@@ -25,7 +25,7 @@
         </div>
         <div class="cookie-button-container">
             <div class="altre-info">
-                <p class="altre-info-button" onclick="openPopupInfo()">Scopri di più</p>
+                <p class="altre-info-button" id="btn-info" onclick="controlClosePopupInfo()">Scopri di più</p>
             </div>
             <div class="accetta-rifiuta-cookie">
                 <p class="cookie-button" id="denie-cookies">Rifiuta</p>

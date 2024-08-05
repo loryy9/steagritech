@@ -1,4 +1,5 @@
 var COOKIE_CONSENT_KEY = "cookieConsent";
+let btnInfo = document.getElementById("btn-info");
 
 // Funzione per impostare un cookie
 function setCookie(name, value, days) {
@@ -52,13 +53,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+let isopen = false;
+
 function openPopupInfo() {
     var popup = document.getElementById("popup-info");
 
     popup.style.display = 'block';
     setTimeout(function () {
         popup.classList.add('open');
-    }, 10); // Slight delay to ensure the display property is set before adding the class
+    }, 10); 
+    btnInfo.innerHTML = "Scopri di meno";
+    isopen = true;
+    console.log(isopen);
 }
 
 function closePopupInfo() {
@@ -67,5 +73,20 @@ function closePopupInfo() {
     popup.classList.remove('open');
     setTimeout(function () {
         popup.style.display = 'none';
-    }, 500); // Assicura che la transizione sia completata prima di nascondere definitivamente
+    }, 500); 
+    btnInfo.innerHTML = "Scopri di più";
+    
 }
+
+function controlClosePopupInfo() {
+    console.log("clicc");
+    if (isopen == true){
+        isopen = false;
+        console.log("entr")
+        closePopupInfo();
+    }else{
+        console.log("ee");
+        openPopupInfo();
+    }
+}
+
