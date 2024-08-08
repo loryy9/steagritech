@@ -231,7 +231,7 @@ body::before {
 }
 
 .right-column img {
-    margin-left: 27%;
+    /* margin-left: 27%; */
     height: 100%;
     margin-top: 14%;
 }
