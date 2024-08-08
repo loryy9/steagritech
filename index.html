@@ -3,44 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="sources/ico/favicon.ico" type="image/x-icon">
     <title>SteAgritech</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="js/script_yt.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+
 </head>
 <body>
-    <div class="popup-info" id="popup-info">
-        <button class="close-btn" id="close-popup" onclick="controlClosePopupInfo()">&#10006;</button>
-        <div class="popup-info-content">                
-            <p>Utilizziamo api di terze parti per visualizzare i video più recenti disponibili sul mio canale YouTube. Accettando i cookie avrò accesso ai tuoi dati sensibili. Ma non preoccuparti, se non vuoi accettarli potrai comunque navigare nel sito senza vedere i video più recenti su YouTube</p>
-        </div>
-    </div>
 
-    <div class="cookie-container" id="cookie-container">
-        <div class="cookie-text">
-            <p>Benvenuto! SteAgritech.it utilizza cookie di terze parti per migliorare la tua esperienza su questo sito. Usa il pulsante "Accetta" per dare il tuo consenso. Usa il pulsante "Rifiuta" per negare il consenso</p>
-            <p><strong>Accettando, ci aiuti a offrirti un servizio migliore!</strong></p>
-        </div>
-        <div class="cookie-button-container">
-            <div class="altre-info">
-                <p class="altre-info-button" id="btn-info" onclick="controlClosePopupInfo()">Scopri di più</p>
-            </div>
-            <div class="accetta-rifiuta-cookie">
-                <p class="cookie-button" id="denie-cookies">Rifiuta</p>
-                <p class="cookie-button" id="accept-cookies">Accetta</p>
-            </div>
-        </div>
-    </div>
     <div class="main-container">
         <nav class="navbar">
             <div class="logo">
                 <img src="sources/logo_bianco.png" alt="Logo">
             </div>
             <div class="nav-links">
-                <a href="./" class="select">HOME</a>
-                <a href="chisono/">CHI SONO</a>
+                <a href="index.html" class="select">HOME</a>
+                <a href="chisono.html">CHI SONO</a>
             </div>
         </nav>
 
@@ -53,12 +31,11 @@
                 <div class="titolo-piccolo">Realizzo contenuti divulgativi riguardo</div>
                 <div class="titolo-grande">MECCANIZZAZIONE AGRICOLA <br>& AGRICOLTURA</div>                
                 <div class="about-me-button">
-                    <a href="chisono/index.html">Qualcosa su di me</a>
+                    <a href="chisono.html">Qualcosa su di me</a>
                 </div>
                 <div class="social">
                     <a href="https://www.instagram.com/ste.agritech/" target="_blank"><img src="sources/Loghi_social/instagram.png" alt="TikTok"></a>
                     <a href="https://www.tiktok.com/@ste_agritech" target="_blank"><img src="sources/Loghi_social/tik-tok.png" alt="Instagram"></a>
-                    <a href="https://www.youtube.com/@ste.agritech" target="_blank" class="yt"><img src="sources/Loghi_social/youtube2.png" alt="Youtube" ></a>
                 </div>
             </div>
             <div class="right-column" id="rightColumn">
@@ -67,7 +44,7 @@
         </div>
         <div class="riga-info">
             <div class="colonna">
-                <p class="number-container"><span class="number" data-number="90000">0</span><span class="descrizione"> + <br>Followers</span></p>
+                <p class="number-container"><span class="number" data-number="70000">0</span><span class="descrizione"> + <br>Followers</span></p>
             </div>
             <div class="colonna">
                 <p class="number-container"><span class="number" data-number="1000">0</span><span class="descrizione"> + <br>Contenuti realizzati</span></p>
@@ -108,18 +85,19 @@
             </div>
             <div class="info-block">
                 <h1>Come lavoro?</h1>
-                <p>Dopo aver concordato con l’azienda quale bene o servizio pubblicizzare e il tipo di format da realizzare (post, video, stories, etc.), procedo con la creazione del contenuto unendo le mie competenze acquisite negli anni di studio e di lavoro con le informazioni fornite dall’azienda. 
+                <p>Dopo aver concordando con l’azienda quale bene o servizio pubblicizzare e il tipo di format da realizzare (post, video, stories, etc.), procedo con la creazione del contenuto unendo le mie competenze acquisite negli anni di studio e di lavoro con le informazioni fornite dall’azienda. 
                     Il contenuto sarà poi esaminato dall’azienda e, solo dopo l’approvazione finale di quest’ultima, caricato sui profili social ste.agritech nella data e nell’orario precedentemente stabiliti.</p>
             </div>
         </div>
         <div class="collaborazioni">
             <div class="titolo-collab">
-                <h1>Alcune aziende con cui ho collaborato</h1>
+                <h1>Alcune aziende con cui ho collaborato
+                </h1>
             </div>
             <div class="contenitore-carte">
-                <!--<div class="card">
+                <div class="card">
                     <img src="sources/Loghi Aziende/2.png" alt="Logo2">
-                </div>-->
+                </div>
                 <div class="card">
                     <img src="sources/Loghi Aziende/4.png" alt="Logo4">
                 </div>
@@ -131,49 +109,22 @@
                 </div>
             </div>
         </div>
-        <!--
-        <div class="recensioni-totale">
-            <div class="titolo-recensioni">
-                <h1>Alcune recensioni</h1>
-            </div>
-            <div class="recensioni">
-                <img src="sources/commento.png" alt="Recensione 1" class="recensione-img">
-                <img src="sources/commento.png" alt="Recensione 2" class="recensione-img">
-                <img src="sources/commento.png" alt="Recensione 3" class="recensione-img">
-                <img src="sources/commento.png" alt="Recensione 4" class="recensione-img">
-            </div>
-        </div>
-        -->
-        <div class="video-wrapper">
-            <div class="title-video">
-                <h1>I video più recenti su YouTube:</h1>                
-            </div>            
-            <div class="video-container">
-                <div class="video-block">
-                    <iframe class="video" id="iframe01" frameborder="0" allowfullscreen></iframe>
+           <!-- <div class="recensioni-totale">
+                <div class="titolo-recensioni">
+                    <h1>Alcune recensioni</h1>
                 </div>
-                <div class="video-block">
-                    <iframe class="video" id="iframe02" frameborder="0" allowfullscreen></iframe>                    
+                <div class="recensioni">
+                    <img src="sources/commento.png" alt="Recensione 1" class="recensione-img">
+                    <img src="sources/commento.png" alt="Recensione 2" class="recensione-img">
+                    <img src="sources/commento.png" alt="Recensione 3" class="recensione-img">
+                    <img src="sources/commento.png" alt="Recensione 4" class="recensione-img">
                 </div>
-                <div class="video-block">
-                    <iframe class="video" id="iframe03" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </div>
-            <a href="https://www.youtube.com/@ste.agritech" target="_blank" class="subscribe-box">
-                <img src="sources/Loghi_social/youtube.png" alt="YouTube Logo">
-                <div class="text-youtube">
-                    <h1>YouTube</h1>
-                    <p>Iscriviti al mio canale</p>                
-                </div>
-            </a>
-        </div>
-            
+            </div>-->
         <div class="footer">
             <div class="footer-column">
                 <div class="social-icons">
                     <a href="https://www.instagram.com/ste.agritech/" target="_blank"><img src="sources/Loghi_social/instagram.png" alt="TikTok"></a>
                     <a href="https://www.tiktok.com/@ste_agritech" target="_blank"><img src="sources/Loghi_social/tik-tok.png" alt="Instagram"></a>
-                    <a href="https://www.youtube.com/@ste.agritech" target="_blank"><img src="sources/Loghi_social/youtube2.png" alt="Youtube"></a>
                 </div>
             </div> 
             <div class="footer-column">
@@ -181,16 +132,19 @@
             </div>
             <div class="footer-column">
                 <div class="site-map">
-                    <a href="./">HOME</a>
-                    <a href="chisono/">CHI SONO</a>
+                    <a href="index.html">HOME</a>
+                    <a href="chisono.html">CHI SONO</a>
                 </div>
             </div>
             <div class="footer-column">
-                <p>Sviluppato da <a href="https://www.instagram.com/lb.devsite/" target="_blank"><u>LB-DevSite</u></a></p>
+                <p>&copy; Sviluppato da <a href="https://www.instagram.com/lb.devsite/" target="_blank"><u>LB-DevSite</u></a></p>
             </div>
+                       
         </div>
     </div>
-    <script src="js/cookies.js"></script>
-    <script src="js/script.js"></script>    
+    <script src="js/script.js"></script>
+    
 </body>
+
+
 </html>

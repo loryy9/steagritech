@@ -26,152 +26,12 @@ body::before {
     z-index: -1;
 }
 
-.cookie-container {
-    width: 900px;
-    height: 250px;
-    position: fixed;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #f4f4f4;
-    /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); */
-    z-index: 1002;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-    border-radius: 7px;    
-    font-size: 20px;
-}
-
-.cookie-text {
-    text-align: center;
-    padding: 0 100px;
-}
-
-.cookie-text p {
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-}
-
-.cookie-button-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 150px;
-    margin-top: 20px;
-}
-
-.cookie-button {
-    background: #245254;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 25px;
-    cursor: pointer;
-    color: #fff;
-    width: 100px;
-    text-align: center;
-}
-
-.cookie-button:hover{
-    background: #8EBCB1;
-    color: #245254;
-    transition: all .3s ease-in-out;
-}
-
-.accetta-rifiuta-cookie{
-    display: flex;
-}
-
-.altre-info-button{
-    background: #8EBCB1;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 25px;
-    cursor: pointer;
-    width: 150px;
-    text-align: center;
-}
-
-.altre-info-button:hover{
-    background: #245254;
-    color: #8EBCB1;
-    transition: all .3s ease-in-out;
-}
-
-.popup-info {
-    display: block; 
-    position: fixed;
-    bottom: 100px; 
-    left: 50%;
-    transform: translateX(-50%);
-    width: 900px;
-    background-color: #f4f4f4;
-    color: black;
-    padding: 20px;
-    border-radius: 7px;
-    z-index: 1001;
-    opacity: 1;
-    transition: all 0.5s ease;
-    pointer-events: none;
-}
-
-.popup-info.open {
-    bottom: 290px; 
-    pointer-events: all;
-}
-
-.popup-info.open .close-btn{
-    transform: rotate(-90deg); 
-    transition: transform .5s ease;
-}
-
-.popup-info .close-btn {
-    position: absolute;
-    transform: rotate(90deg); 
-    top: 15px;
-    right: 15px;
-    background: none;
-    border: none;
-    font-size: 25px;
-    cursor: pointer;
-    color: #245254;
-    z-index: 1001;
-}
-
-.popup-info .close-btn:hover {
-    transform: scale(1.2) rotate(-90deg); 
-}
-
-.popup-info-content {    
-    padding: 30px 100px 0px 100px;
-    position: relative;
-    font-size: 20px;
-}
-
-.popup-info-content button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    color: #245254;
-}
-
-.popup-info-content p {
-    margin: 0;
-    padding: 20px 20px 20px 20px;
-    text-align: center;
-}
-
 .main-container {
     background: url('../sources/wallpaper5.png') center/cover no-repeat;
     color: #ffffff;
     height: 110vh;
 }
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -316,20 +176,19 @@ body::before {
 }
 
 .social img {
-    width: 50px;
+    width: 40px;
     margin-right: 20px;
     transition: width 0.2s, transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
 }
 
-.social .yt img{
-    width: 70px;
-}
 
 .social img:hover {
     transform: scale(1.3);
-
+    /*box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8); */
 }
+
+
 
 .riga-info {
     margin-top: 3.5%;
@@ -339,7 +198,9 @@ body::before {
     height: 200px;
     background-color: #245254;
     opacity: 1;
+    /* Opacità iniziale a 0 */
     transition: opacity 1s ease-out;
+    /* Transizione dell'opacità */
 }
 
 .colonna {
@@ -357,6 +218,8 @@ body::before {
     font-style: italic;
 }
 
+
+
 .number {
     font-size: 50px;
     font-weight: bold;
@@ -367,8 +230,9 @@ body::before {
 .descrizione {
     font-size: 30px;
     font-weight: bold;
-    color: white;
+    color: black;
 }
+
 
 .spazio {
     height: 20vh;
@@ -396,6 +260,7 @@ body::before {
     color: #ffffff;
     padding: 40px;
     width: 20%;
+    /*   border-radius: 20px ;*/
 }
 
 .contattami h1 {
@@ -428,7 +293,7 @@ body::before {
     transition: 0.6;
 }
 
-.popup{
+.popup {
     display: none;
     position: fixed;
     bottom: 0;
@@ -437,7 +302,7 @@ body::before {
     background-color: #245254;
     color: #8EBCB1;
     padding: 70px;
-    z-index: 1001;
+    z-index: 1000;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     opacity: 0;
@@ -449,6 +314,7 @@ body::before {
     transform: translate(-50%, -50%);
     opacity: 1;
 }
+
 
 .popup-content {
     text-align: center;
@@ -477,12 +343,13 @@ body::before {
     border-radius: 5px;
 }
 
-.popup button:hover{
+.popup button:hover {
     color: #8EBCB1;
     background-color: #245254;
     border: 1px solid #8EBCB1;
     margin-top: 8px;
 }
+
 
 .info {
     display: flex;
@@ -519,8 +386,8 @@ body::before {
     display: grid;
     grid-template-rows: auto 1fr;
     max-width: 100%;
-    padding: 100px 100px 120px 100px;
-    height: 30%;
+    padding: 100px 100px 100px 100px;
+    height: 50%;
 }
 
 .titolo-collab {
@@ -535,7 +402,7 @@ body::before {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     justify-content: center;
     align-items: center;
-    height: 30px;
+    height: 40px;
 }
 
 .collaborazioni .card {
@@ -580,69 +447,11 @@ body::before {
     border-radius: 10px;
     transition: all 0.5s;
     margin-bottom: 20px;
+
 }
 
 .recensione-img:hover {
     opacity: 0.8;
-}
-
-.video-wrapper{
-    background-color: #245254;
-    margin: 0;
-    padding: 0;
-    border-top: 10px solid black;
-    height: 70%;
-}
-
-.video-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 30px;
-    justify-items: center; 
-    padding: 20px 100px;
-    height: 40%;
-}
-
-.video-section, .video-block {
-    width: 100%;
-    height: 100%;
-}
-
-.video {
-    width: 100%; 
-    height: 100%; 
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
-
-.title-video {
-    text-align: left;
-    padding-top: 40px;
-    color: white;
-    padding-left: 100px;
-    margin-bottom: 30px;
-}
-
-.title-video h1, .title-video h3 {
-    margin: 0;
-    color: white;
-    font-size: 2rem;
-}
-
-.subscribe-box{
-    background-color: rgb(161, 5, 5);
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    margin-top: 25px;
-    text-decoration: none;
-    color: inherit;
-}
-
-.text-youtube{
-    line-height: 1px;
 }
 
 .footer {
@@ -711,6 +520,11 @@ body::before {
 }
 
 @media only screen and (max-width: 768px) {
+
+    /**{
+        /*background-color: #245254; */
+    /*    border: 1px solid green        
+    }*/
     body {
         overflow-x: hidden;
         background-color: #245254
@@ -719,87 +533,6 @@ body::before {
     body::before {
         overflow: hidden;
         display: none;
-    }
-
-    .cookie-container{
-        width: 100vw;
-        height: min-content;
-        bottom: 0;
-        padding-top: 7px;
-    }
-
-    .cookie-text{
-        font-size: 12px;
-        padding: 5px;
-        width: 70%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .cookie-button-container{
-        flex-direction: column-reverse;;
-        gap: 10px;
-        max-width: 100vw;
-        font-size: 15px;
-        margin-top: 5px;
-    }
-
-    .altre-info{
-        width: 70%;
-        text-align: center;
-    }
-
-    .altre-info-button{
-        width: 80%;      
-    }
-
-    .altre-info-button:hover{
-        background: #8EBCB1;
-        color: #242424;
-        transition: all .3s ease-in-out;
-    }
-
-    .accetta-rifiuta-cookie{
-        width: 70%;
-        justify-content: space-between;
-    }
-
-    .popup-info {
-        width: 100vw;
-        height: auto;
-        bottom: 50px; 
-    }
-
-    .popup-info.open {
-        bottom: 210px; 
-        pointer-events: all;
-    }
-
-    .popup-info-content {    
-        font-size: 12px;
-        padding: 15px;
-        width: 80%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .popup-info-content p {
-        font-size: 12px;
-    }
-
-    .popup-info .close-btn {
-        position: absolute;
-        top: 25px;
-        right: 40px;
-        background: none;
-        border: none;
-        font-size: 17px;
-        cursor: pointer;
-        color: #245254;
-        z-index: 1001;
-        transition: transform 0.3s ease; 
     }
 
     .main-container {
@@ -926,10 +659,6 @@ body::before {
         transition: filter 0.s;
     }
 
-    .social .yt img{
-        width: 50px;
-    }
-
     .social img:hover {
         filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
     }
@@ -959,15 +688,16 @@ body::before {
 
     .right-column {
         max-height: calc(55vh - 28px);
+        /* 28px rappresenta la somma delle eventuali altezze di margini o padding */
         overflow-y: hidden;
     }
 
     .right-column img {
         margin-left: 0;
         width: 65%;
-        margin-top: 0px;
+        margin-top: 0;
         height: auto;
-        margin-bottom: 2px;
+        margin-bottom: 0;
         display: block;
     }
 
@@ -977,6 +707,7 @@ body::before {
         margin-top: 0;
         padding-top: auto;
         background-color: #D9D9D9;
+        /*       border-bottom: 1px solid #245254;*/
     }
 
     .colonna {
@@ -990,6 +721,7 @@ body::before {
         margin-bottom: 30px;
     }
 
+
     .number {
         font-size: 45px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -997,7 +729,6 @@ body::before {
 
     .descrizione {
         font-size: 25px;
-        color: #245254;
     }
 
     .trasparente {
@@ -1042,7 +773,7 @@ body::before {
         padding-top: 10px;
     }
 
-    .popup{
+    .popup {
         padding: 40px;
     }
 
@@ -1112,30 +843,6 @@ body::before {
         font-size: 10px;
     }
 
-    .video-wrapper{
-        padding-bottom: 100px;
-        height: min-content;
-    }
-
-    .video-container {
-        padding: 20px 50px; 
-        height: min-content;
-    }
-    .title-video {
-        padding-left: 0; 
-        text-align: center;      
-    }
-
-    .title-video h1, .title-video h3 {
-        font-size: 1.5rem;
-    }
-
-    .subscribe-box {
-        width: 80%; 
-        margin-top: 15px;
-        margin-bottom: 30px;
-    }
-
     .footer {
         flex-direction: column;
         font-size: 25px;
@@ -1155,4 +862,6 @@ body::before {
     .footer .site-map a:nth-child(2){
         margin-left: 7px;
     }
+
+
 }

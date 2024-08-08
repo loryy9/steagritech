@@ -15,8 +15,6 @@ function closePopup() {
     }, 500); // Assicura che la transizione sia completata prima di nascondere definitivamente
 }
 
-
-
 function animateColumns() {
     anime({
         targets: '#leftColumn',
