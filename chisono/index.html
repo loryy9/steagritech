@@ -10,6 +10,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
 </head>
 <body>
+    <div class="popup-info" id="popup-info">
+        <div class="popup-content">                
+            <p>Utilizziamo api di terze parti per visualizzare i video più recenti disponibili sul mio canale YouTube. Accettando i cookie avrò accesso ai tuoi dati sensibili. Ma non preoccuparti, se non vuoi accettarli potrai comunque navigare nel sito senza vedere i video più recenti su YouTube</p>
+            <button onclick="closePopupInfo()">Chiudi</button>
+        </div>
+    </div>
+
+    <div class="cookie-container" id="cookie-container">
+        <div class="cookie-text">
+            <p>Benvenuto! SteAgritech.it utilizza cookie di terze parti per migliorare la tua esperienza su questo sito. Usa il pultante "Accetta" per dare il tuo consenso. Usa il plsante "Rifiuta" per negare il consenso</p>
+            <p><span><img src="sources/cookie.png"></span><strong>Accettando, ci aiuti a offrirti un servizio migliore!</strong><span><img src="sources/cookie.png"></span></p>
+        </div>
+        <div class="cookie-button-container">
+            <div class="altre-info">
+                <p class="altre-info-button" onclick="openPopupInfo()">Scopri di piu</p>
+            </div>
+            <div class="accetta-rifiuta-cookie">
+                <p class="cookie-button" id="denie-cookies">Rifiuta</p>
+                <p class="cookie-button" id="accept-cookies">Accetta</p>
+            </div>
+        </div>
+    </div>
     <div class="main-container">
         <nav class="navbar">
             <div class="logo">
@@ -94,5 +116,6 @@
             
         </div>
     </div>
+    <script src="../js/cookies.js"></script>
     <script src="../js/script2.js"></script>
 </body>

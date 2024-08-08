@@ -23,6 +23,148 @@ body {
     overflow-x: hidden;
 }
 
+.cookie-container {
+    width: 900px;
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f4f4f4;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 7px;    
+    font-size: 20px;
+}
+
+.cookie-text {
+    text-align: center;
+    padding: 0 100px;
+}
+
+.cookie-text p {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center;
+}
+
+.cookie-text p span {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+}
+
+.cookie-text p span img {
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.cookie-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 150px;
+    margin-top: 20px;
+}
+
+.cookie-button {
+    background: #245254;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #fff;
+    width: 100px;
+    text-align: center;
+}
+
+.cookie-button:hover{
+    background: #8EBCB1;
+    color: #245254;
+    transition: all .3s ease-in-out;
+}
+
+.accetta-rifiuta-cookie{
+    display: flex;
+}
+
+.altre-info-button{
+    background: #8EBCB1;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.altre-info-button:hover{
+    background: #245254;
+    color: #8EBCB1;
+    transition: all .3s ease-in-out;
+}
+
+.popup-info {
+    padding: 40px;
+}
+
+.popup-info {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    background-color: #245254;
+    color: #8EBCB1;
+    padding: 70px;
+    z-index: 1001;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+    /* Aggiunto per transizioni fluide */
+}
+
+.popup-info.open {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup-content h2 {
+    font-size: 25px;
+}
+
+.popup-content p {
+    font-size: 20px;
+}
+
+.popup-content a{
+    color: #8EBCB1;
+}
+
+.popup-info button {
+    background-color: #8EBCB1;
+    color: #245254;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.popup-info button:hover {
+    color: #8EBCB1;
+    background-color: #245254;
+    border: 1px solid #8EBCB1;
+    margin-top: 8px;
+}
+
 .main-container {
     width: 100%;
 }
@@ -249,6 +391,41 @@ body {
         padding-left: 0px;
         padding-top: 44px;
         margin-right: 12px;
+    }
+
+    .cookie-container{
+        width: 100vw;
+        bottom: 0;
+    }
+
+    .cookie-text{
+        font-size: 15px;
+        padding: 15px;
+        width: 70%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .cookie-text p span img {
+        height: 20px;
+        margin-left: -2px;
+        margin-right: -2px;
+    }
+
+    .cookie-button-container{
+        flex-direction: column-reverse;;
+        gap: 10px;
+    }
+
+    .altre-info{
+        width: 70%;
+        text-align: center;
+    }
+
+    .accetta-rifiuta-cookie{
+        width: 70%;
+        justify-content: space-between;
     }
 
     .card-container {
