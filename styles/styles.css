@@ -710,7 +710,7 @@ body::before {
     }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 768px) {
     body {
         overflow-x: hidden;
         background-color: #245254
@@ -973,9 +973,9 @@ body::before {
 
     .riga-info {
         flex-direction: column;
-        height: 50%;
+        height: auto;
         margin-top: 0;
-        padding-top: 10px;
+        padding-top: auto;
         background-color: #D9D9D9;
     }
 
