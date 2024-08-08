@@ -1,4 +1,6 @@
 var COOKIE_CONSENT_KEY = "cookieConsent";
+let btnInfo = document.getElementById("btn-info");
+var popup = document.getElementById("popup-info");
 
 // Funzione per impostare un cookie
 function setCookie(name, value, days) {
@@ -29,13 +31,15 @@ function showCookieConsentBanner() {
     cookieConsentBanner.style.display = "flex";
 
     document.getElementById("accept-cookies").addEventListener("click", function () {
+        popup.style.display = "none";
         setCookie(COOKIE_CONSENT_KEY, "true", 30); // Cookie valido per 1 giorno per test
         cookieConsentBanner.style.display = "none";
         console.log("Cookie consent accepted and set.");
         initializeYouTubeAPI(); // Chiama la tua funzione per l'inizializzazione dell'API di YouTube
     });
 
-    document.getElementById("deny-cookies").addEventListener("click", function () {
+    document.getElementById("denie-cookies").addEventListener("click", function () {
+        popup.style.display = "none";
         setCookie(COOKIE_CONSENT_KEY, "false", 30); // Cookie valido per 1 giorno per test
         cookieConsentBanner.style.display = "none";
         console.log("Cookie consent denied and set.");
@@ -52,20 +56,36 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-function openPopupInfo() {
-    var popup = document.getElementById("popup-info");
+let isopen = false;
 
+function openPopupInfo() {
     popup.style.display = 'block';
-    void popup.offsetWidth; // Forza il reflow per garantire che la transizione funzioni
-    popup.classList.add('open');
+    setTimeout(function () {
+        popup.classList.add('open');
+    }, 10); 
+    btnInfo.innerHTML = "Scopri di meno";
+    isopen = true;
+    console.log(isopen);
 }
 
-
 function closePopupInfo() {
-    var popup = document.getElementById("popup-info");
-
     popup.classList.remove('open');
     setTimeout(function () {
         popup.style.display = 'none';
-    }, 500); // Assicura che la transizione sia completata prima di nascondere definitivamente
+    }, 500); 
+    btnInfo.innerHTML = "Scopri di più";
+    
 }
+
+function controlClosePopupInfo() {
+    console.log("clicc");
+    if (isopen == true){
+        isopen = false;
+        console.log("entr")
+        closePopupInfo();
+    }else{
+        console.log("ee");
+        openPopupInfo();
+    }
+}
+

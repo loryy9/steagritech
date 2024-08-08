@@ -28,13 +28,14 @@ body::before {
 
 .cookie-container {
     width: 900px;
+    height: 250px;
     position: fixed;
     bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
     background-color: #f4f4f4;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.7);
-    z-index: 1000;
+    /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); */
+    z-index: 1002;
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -50,19 +51,8 @@ body::before {
 
 .cookie-text p {
     display: flex;
-    align-items: center; /* Centra verticalmente */
+    align-items: center; 
     justify-content: center;
-}
-
-.cookie-text p span {
-    display: flex;
-    align-items: center; /* Centra verticalmente */
-}
-
-.cookie-text p span img {
-    height: 30px;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .cookie-button-container {
@@ -100,12 +90,81 @@ body::before {
     margin: 0 10px;
     border-radius: 25px;
     cursor: pointer;
+    width: 150px;
+    text-align: center;
 }
 
 .altre-info-button:hover{
     background: #245254;
     color: #8EBCB1;
     transition: all .3s ease-in-out;
+}
+
+.popup-info {
+    display: block; 
+    position: fixed;
+    bottom: 100px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    background-color: #f4f4f4;
+    color: black;
+    padding: 20px;
+    border-radius: 7px;
+    z-index: 1001;
+    opacity: 1;
+    transition: all 0.5s ease;
+    pointer-events: none;
+}
+
+.popup-info.open {
+    bottom: 290px; 
+    pointer-events: all;
+}
+
+.popup-info.open .close-btn{
+    transform: rotate(-90deg); 
+    transition: transform .5s ease;
+}
+
+.popup-info .close-btn {
+    position: absolute;
+    transform: rotate(90deg); 
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #245254;
+    z-index: 1001;
+}
+
+.popup-info .close-btn:hover {
+    transform: scale(1.2) rotate(-90deg); 
+}
+
+.popup-info-content {    
+    padding: 30px 100px 0px 100px;
+    position: relative;
+    font-size: 20px;
+}
+
+.popup-info-content button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #245254;
+}
+
+.popup-info-content p {
+    margin: 0;
+    padding: 20px 20px 20px 20px;
+    text-align: center;
 }
 
 .main-container {
@@ -272,8 +331,6 @@ body::before {
 
 }
 
-
-
 .riga-info {
     margin-top: 3.5%;
     display: flex;
@@ -282,9 +339,7 @@ body::before {
     height: 200px;
     background-color: #245254;
     opacity: 1;
-    /* Opacità iniziale a 0 */
     transition: opacity 1s ease-out;
-    /* Transizione dell'opacità */
 }
 
 .colonna {
@@ -302,8 +357,6 @@ body::before {
     font-style: italic;
 }
 
-
-
 .number {
     font-size: 50px;
     font-weight: bold;
@@ -316,7 +369,6 @@ body::before {
     font-weight: bold;
     color: white;
 }
-
 
 .spazio {
     height: 20vh;
@@ -344,7 +396,6 @@ body::before {
     color: #ffffff;
     padding: 40px;
     width: 20%;
-    /*   border-radius: 20px ;*/
 }
 
 .contattami h1 {
@@ -377,8 +428,7 @@ body::before {
     transition: 0.6;
 }
 
-.popup,
-.popup-info {
+.popup{
     display: none;
     position: fixed;
     bottom: 0;
@@ -395,12 +445,10 @@ body::before {
     /* Aggiunto per transizioni fluide */
 }
 
-.popup.open,
-.popup-info.open {
+.popup.open {
     transform: translate(-50%, -50%);
     opacity: 1;
 }
-
 
 .popup-content {
     text-align: center;
@@ -418,8 +466,7 @@ body::before {
     color: #8EBCB1;
 }
 
-.popup button,
-.popup-info button {
+.popup button {
     background-color: #8EBCB1;
     color: #245254;
     padding: 10px 20px;
@@ -430,14 +477,12 @@ body::before {
     border-radius: 5px;
 }
 
-.popup button:hover,
-.popup-info button:hover {
+.popup button:hover{
     color: #8EBCB1;
     background-color: #245254;
     border: 1px solid #8EBCB1;
     margin-top: 8px;
 }
-
 
 .info {
     display: flex;
@@ -535,7 +580,6 @@ body::before {
     border-radius: 10px;
     transition: all 0.5s;
     margin-bottom: 20px;
-
 }
 
 .recensione-img:hover {
@@ -552,9 +596,9 @@ body::before {
 
 .video-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Disposizione in griglia fluida */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 30px;
-    justify-items: center; /* Centra i contenuti nella griglia */
+    justify-items: center; 
     padding: 20px 100px;
     height: 40%;
 }
@@ -565,8 +609,8 @@ body::before {
 }
 
 .video {
-    width: 100%; /* Imposta larghezza al 100% del contenitore */
-    height: 100%; /* Altezza proporzionale */
+    width: 100%; 
+    height: 100%; 
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
@@ -597,12 +641,9 @@ body::before {
     color: inherit;
 }
 
-
 .text-youtube{
     line-height: 1px;
 }
-
-
 
 .footer {
     background-color: #2c2c2c;
@@ -670,11 +711,6 @@ body::before {
 }
 
 @media only screen and (max-width: 770px) {
-
-    /**{
-        /*background-color: #245254; */
-    /*    border: 1px solid green        
-    }*/
     body {
         overflow-x: hidden;
         background-color: #245254
@@ -687,27 +723,26 @@ body::before {
 
     .cookie-container{
         width: 100vw;
+        height: min-content;
         bottom: 0;
+        padding-top: 7px;
     }
 
     .cookie-text{
-        font-size: 15px;
-        padding: 15px;
+        font-size: 12px;
+        padding: 5px;
         width: 70%;
         position: relative;
         left: 50%;
         transform: translateX(-50%);
     }
 
-    .cookie-text p span img {
-        height: 20px;
-        margin-left: -2px;
-        margin-right: -2px;
-    }
-
     .cookie-button-container{
         flex-direction: column-reverse;;
         gap: 10px;
+        max-width: 100vw;
+        font-size: 15px;
+        margin-top: 5px;
     }
 
     .altre-info{
@@ -715,9 +750,56 @@ body::before {
         text-align: center;
     }
 
+    .altre-info-button{
+        width: 80%;      
+    }
+
+    .altre-info-button:hover{
+        background: #8EBCB1;
+        color: #242424;
+        transition: all .3s ease-in-out;
+    }
+
     .accetta-rifiuta-cookie{
         width: 70%;
         justify-content: space-between;
+    }
+
+    .popup-info {
+        width: 100vw;
+        height: auto;
+        bottom: 50px; 
+    }
+
+    .popup-info.open {
+        bottom: 210px; 
+        pointer-events: all;
+    }
+
+    .popup-info-content {    
+        font-size: 12px;
+        padding: 15px;
+        width: 80%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .popup-info-content p {
+        font-size: 12px;
+    }
+
+    .popup-info .close-btn {
+        position: absolute;
+        top: 25px;
+        right: 40px;
+        background: none;
+        border: none;
+        font-size: 17px;
+        cursor: pointer;
+        color: #245254;
+        z-index: 1001;
+        transition: transform 0.3s ease; 
     }
 
     .main-container {
@@ -896,7 +978,6 @@ body::before {
         margin-top: 0;
         padding-top: 10px;
         background-color: #D9D9D9;
-        /*       border-bottom: 1px solid #245254;*/
     }
 
     .colonna {
@@ -909,7 +990,6 @@ body::before {
     .riga-info .colonna:last-child {
         margin-bottom: 30px;
     }
-
 
     .number {
         font-size: 45px;
@@ -963,8 +1043,7 @@ body::before {
         padding-top: 10px;
     }
 
-    .popup,
-    .popup-info {
+    .popup{
         padding: 40px;
     }
 
@@ -1077,5 +1156,4 @@ body::before {
     .footer .site-map a:nth-child(2){
         margin-left: 7px;
     }
-    
 }
