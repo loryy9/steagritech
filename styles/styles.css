@@ -101,7 +101,7 @@ body::before {
 }
 
 .popup-info {
-    display: block; 
+    display: none; 
     position: fixed;
     bottom: 100px; 
     left: 50%;
@@ -120,6 +120,7 @@ body::before {
 .popup-info.open {
     bottom: 290px; 
     pointer-events: all;
+    display: block;
 }
 
 .popup-info.open .close-btn{
@@ -709,7 +710,7 @@ body::before {
     }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 768px) {
     body {
         overflow-x: hidden;
         background-color: #245254
@@ -768,11 +769,13 @@ body::before {
         width: 100vw;
         height: auto;
         bottom: 50px; 
+        display: none;
     }
 
     .popup-info.open {
         bottom: 25vh; 
         pointer-events: all;
+        display: block;
     }
 
     .popup-info-content {    
