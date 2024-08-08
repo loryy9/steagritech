@@ -723,7 +723,7 @@ body::before {
 
     .cookie-container{
         width: 100vw;
-        height: 25vh;
+        height: 30vh;
         bottom: 0;
         /* padding-top: 7px; */
     }
