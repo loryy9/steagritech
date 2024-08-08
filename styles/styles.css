@@ -231,7 +231,7 @@ body::before {
 }
 
 .right-column img {
-    /* margin-left: 27%; */
+    margin-left: 27%;
     height: 100%;
     margin-top: 14%;
 }
@@ -964,12 +964,11 @@ body::before {
 
     .right-column img {
         margin-left: 0;
-        width: 75%;
+        width: 65%;
         margin-top: 0px;
         height: auto;
-        margin-bottom: 20px;
+        margin-bottom: 2px;
         display: block;
-        overflow: visible;
     }
 
     .riga-info {
