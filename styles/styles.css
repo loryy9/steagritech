@@ -773,7 +773,7 @@ body::before {
     }
 
     .popup-info.open {
-        bottom: 25vh; 
+        bottom: 30vh; 
         pointer-events: all;
         display: block;
     }
